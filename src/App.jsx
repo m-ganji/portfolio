@@ -10,13 +10,29 @@ import { LuDownload } from "react-icons/lu";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { useState } from "react";
+import { useEffect } from "react";
 
 function App() {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
-    <div className="bg-lightBg  w-screen h-screen font-sans">
+    <div className="bg-lightBg dark:bg-black bg  w-screen h-screen font-sans">
       <header className="h-[10%] flex justify-between mx-[10%]">
         <img src={Logo} alt="" className="" />
-        <div className="flex justify-start items-baseline gap-5 p-2">
+        <div className="flex justify-start items-baseline gap-5 p-2 dark:text-lightBg">
           <div className="hover:border-b hover:border-mainOrange hover:text-mainOrange">
             Home
           </div>
@@ -26,13 +42,13 @@ function App() {
           <div className="hover:border-b hover:border-mainOrange hover:text-mainOrange">
             Contact
           </div>
-          <div>
+          <button onClick={handleThemeSwitch}>
             <CiLight />
-          </div>
+          </button>
         </div>
       </header>
       <main className="mx-[10%] flex">
-        <section className="mt-[7.5%] w-1/2">
+        <section className="mt-[7.5%] w-1/2 dark:text-lightBg">
           <h1 className="text-mainOrange">WEB DEVELOPER</h1>
           <h4 className="text-6xl font-semibold mt-5">
             Hello, my name is <br />
@@ -50,7 +66,7 @@ function App() {
             />
             <Button
               title="Download CV"
-              className="bg-black text-lightBg mt-5 flex justify-center items-center gap-1"
+              className="bg-black dark:bg-lightBg dark:text-black text-lightBg mt-5 flex justify-center items-center gap-1"
               icon={<LuDownload />}
             />
           </div>
@@ -92,8 +108,8 @@ function App() {
       </main>
 
       {/* <footer className="mx-[10%]">
-        <p>&copy; 2023 Your Website Name. All rights reserved.</p>
-      </footer> */}
+          <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+        </footer> */}
     </div>
   );
 }
