@@ -12,8 +12,16 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+// import { LiaLanguageSolid } from "react-icons/lia";
 
 function App() {
+  const [t, i18n] = useTranslation("global");
+
+  const handleChangeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
@@ -34,18 +42,23 @@ function App() {
         <img src={Logo} alt="" className="" />
         <div className="flex justify-start items-baseline gap-5 p-2 dark:text-lightBg">
           <div className="hover:border-b hover:border-mainOrange hover:text-mainOrange">
-            Home
+            {t("header.firstButton")}
           </div>
           <div className="hover:border-b hover:border-mainOrange hover:text-mainOrange">
-            My Projects
+            {t("header.secondButton")}
           </div>
           <div className="hover:border-b hover:border-mainOrange hover:text-mainOrange">
-            Contact
+            {t("header.thirdButton")}
           </div>
+          {/* <button>
+            <LiaLanguageSolid />
+          </button> */}
           <button onClick={handleThemeSwitch}>
             <CiLight />
           </button>
         </div>
+        {/* <button onClick={() => handleChangeLanguage("en")}>en</button>
+        <button onClick={() => handleChangeLanguage("fa")}>fa</button> */}
       </header>
       <main className="mx-[10%] flex">
         <section className="mt-[7.5%] w-1/2 dark:text-lightBg">
