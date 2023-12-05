@@ -3,5 +3,14 @@
     "firstButton": "خانه",
     "secondButton": "پروژه های من",
     "thirdButton": "راه های ارتباطی"
+  },
+  "main": {
+    "firstPart": {
+      "firstLine": "برنامه نویس وب",
+      "secondLine": ".سلام، من محمد گنجی هستم",
+      "thirdLine": "توضیحی کوتاه در مورد من، سفر شغلی من و کاری که حرفه ای انجام میدم",
+      "firstButton": "دانلود رزومه",
+      "secondButton": "ارتباط با من"
+    }
   }
 }

@@ -13,15 +13,10 @@ import { FaInstagram } from "react-icons/fa";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-// import { LiaLanguageSolid } from "react-icons/lia";
+import { LiaLanguageSolid } from "react-icons/lia";
 
 function App() {
-  const [t, i18n] = useTranslation("global");
-
-  const handleChangeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-  };
-
+  // switching the theme
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
@@ -34,6 +29,18 @@ function App() {
 
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  // switching the language
+  const [t, i18n] = useTranslation("global");
+
+  const handleChangeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+  const [openModal, setOpenModal] = useState(false);
+
+  const handlelanguageSwitch = () => {
+    setOpenModal((prevOpenModal) => !prevOpenModal);
   };
 
   return (
@@ -50,8 +57,27 @@ function App() {
           <div className="hover:border-b hover:border-mainOrange hover:text-mainOrange">
             {t("header.thirdButton")}
           </div>
-          {/* <button>
+          <button
+            onClick={(e) => {
+              handlelanguageSwitch();
+              console.log(e);
+            }}
+            className=""
+          >
             <LiaLanguageSolid />
+          </button>
+          {openModal && (
+            <button className="px-2 py-2 rounded bg-mainOrange">
+              Open Modal
+            </button>
+          )}
+          {/* <button
+            onClick={handlelanguageSwitch}
+            className="flex justify-center items-center flex-col"
+          >
+            <LiaLanguageSolid />
+
+            <button className="px-4 py-2 rounded bg-black ">Open Modal</button>
           </button> */}
           <button onClick={handleThemeSwitch}>
             <CiLight />
@@ -62,23 +88,19 @@ function App() {
       </header>
       <main className="mx-[10%] flex">
         <section className="mt-[7.5%] w-1/2 dark:text-lightBg">
-          <h1 className="text-mainOrange">WEB DEVELOPER</h1>
+          <h1 className="text-mainOrange"> {t("main.firstPart.firstLine")}</h1>
           <h4 className="text-6xl font-semibold mt-5">
-            Hello, my name is <br />
-            Mohamad Ganji
+            {t("main.firstPart.secondLine")}
           </h4>
-          <p className="mt-5">
-            Brief description with insights into myself, my vocational <br />{" "}
-            journey, and what I engage in professionally.
-          </p>{" "}
+          <p className="mt-5">{t("main.firstPart.thirdLine")}</p>{" "}
           <div className="flex gap-14">
             <Button
-              title="Contact me"
+              title={t("main.firstPart.secondButton")}
               className="bg-mainOrange text-lightBg mt-5 flex justify-center items-center gap-1"
               icon={<PiTelegramLogoThin />}
             />
             <Button
-              title="Download CV"
+              title={t("main.firstPart.firstButton")}
               className="bg-black dark:bg-lightBg dark:text-black text-lightBg mt-5 flex justify-center items-center gap-1"
               icon={<LuDownload />}
             />

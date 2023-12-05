@@ -3,5 +3,16 @@
     "firstButton": "home",
     "secondButton": "My Projects",
     "thirdButton": "Contact"
+  },
+  "main": {
+    "firstPart": {
+      "firstLine": "WEB DEVELOPER",
+      "secondLine": "Hello, my name is Mohamad Ganji",
+      "thirdLine": "Brief description with insights into myself, my vocational journey, and what I engage in professionally.",
+      "firstButton": "Download CV",
+      "secondButton": "Contact me"
+    },
+    "secondButton": "My Projects",
+    "thirdButton": "Contact"
   }
 }
