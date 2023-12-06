@@ -12,11 +12,11 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import { LiaLanguageSolid } from "react-icons/lia";
 import { FaArrowTurnDown } from "react-icons/fa6";
-import { CgProfile } from "react-icons/cg";
 import TabsCom from "./components/TabsCom";
+import useLanguage from "./components/useLanguage";
+import { AiOutlineExclamation } from "react-icons/ai";
 
 function App() {
   // switching the theme
@@ -35,19 +35,10 @@ function App() {
   };
 
   // switching the language
-  const [t, i18n] = useTranslation("global");
-
-  const handleChangeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-  };
-  const [openModal, setOpenModal] = useState(false);
-
-  const handlelanguageSwitch = () => {
-    setOpenModal((prevOpenModal) => !prevOpenModal);
-  };
+  const { t, handleChangeLanguage } = useLanguage();
 
   return (
-    <div className="bg-lightBg dark:bg-black w-full h-full font-sans">
+    <div className="bg-lightBg dark:bg-black dark:text-lightBg w-full h-full font-sans">
       <header className="h-[10%] flex justify-between mx-[10%]">
         <img src={Logo} alt="" className="h-20" />
         <div className="flex justify-start items-baseline gap-5 p-2 dark:text-lightBg">
@@ -61,19 +52,19 @@ function App() {
             {t("header.thirdButton")}
           </div>
           <button
-            onClick={(e) => {
-              handlelanguageSwitch();
-              console.log(e);
-            }}
+            // onClick={(e) => {
+            //   handlelanguageSwitch();
+            //   console.log(e);
+            // }}
             className=""
           >
             <LiaLanguageSolid />
           </button>
-          {openModal && (
+          {/* {openModal && (
             <button className="px-2 py-2 rounded bg-mainOrange">
               Open Modal
             </button>
-          )}
+          )} */}
           {/* <button
             onClick={handlelanguageSwitch}
             className="flex justify-center items-center flex-col"
@@ -86,8 +77,8 @@ function App() {
             <CiLight />
           </button>
         </div>
-        {/* <button onClick={() => handleChangeLanguage("en")}>en</button>
-        <button onClick={() => handleChangeLanguage("fa")}>fa</button> */}
+        <button onClick={() => handleChangeLanguage("en")}>en</button>
+        <button onClick={() => handleChangeLanguage("fa")}>fa</button>
       </header>
       <main className="mx-[10%] flex flex-col">
         <div className="first_part flex">
@@ -149,13 +140,13 @@ function App() {
         </div>
         <div className="second_part flex justify-between items-center mt-28 flex-col">
           <FaArrowTurnDown color="#F66C59" className="mb-28" />
-          <div className="flex justify-center items-center dark:text-lightBg gap-4 mb-16">
-            <CgProfile color="#F66C59" />
+          <div className="flex justify-center items-center dark:text-lightBg mb-16">
+            <AiOutlineExclamation color="#F66C59" />
             {t("main.secondPart.header")}
           </div>
           <div className="flex w-full">
             <div className="w-1/2">test</div>
-            <div className="w-1/2">
+            <div className="w-1/2 dark:text-lightBg">
               <TabsCom />
             </div>
           </div>

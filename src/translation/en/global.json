@@ -13,7 +13,14 @@
       "secondButton": "Contact me"
     },
     "secondPart": {
-      "header": "About me"
+      "header": "About me",
+      "firstButton": "Overview",
+      "secondButton": "Credentials",
+      "thirdButton": "Skills",
+      "paragraph": "I specialize in crafting intuitive websites with cutting-edge technology.delivering dynamic and engaging user experiences",
+      "calender": "Born on 27 Sep,1999",
+      "skills": "Language skills",
+      "language": "English,Persian,German"
     }
   }
 }
