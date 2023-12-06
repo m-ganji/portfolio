@@ -1,0 +1,16 @@
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: white !important;
+  background-color: #f66c59 !important;
+}
+
+.css-1aquho2-MuiTabs-indicator {
+  background-color: transparent !important;
+}
+
+button#simple-tab-0 {
+  border-radius: 10px 0px 0px 10px;
+}
+
+button#simple-tab-2 {
+  border-radius: 0px 10px 10px 0px;
+}

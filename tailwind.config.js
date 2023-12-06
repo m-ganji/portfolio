@@ -16,3 +16,7 @@ export default {
   },
   plugins: [],
 };
+
+// mainOrange: "#00BFFE",
+//       // black: "#000000",
+//       black: "#373866",

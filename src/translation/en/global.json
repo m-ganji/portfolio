@@ -12,7 +12,8 @@
       "firstButton": "Download CV",
       "secondButton": "Contact me"
     },
-    "secondButton": "My Projects",
-    "thirdButton": "Contact"
+    "secondPart": {
+      "header": "About me"
+    }
   }
 }
