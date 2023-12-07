@@ -9,6 +9,9 @@ import { CgProfile } from "react-icons/cg";
 import { BiPhoneCall } from "react-icons/bi";
 import { IoMail } from "react-icons/io5";
 import { CiCalendar } from "react-icons/ci";
+import { MdOutlineWorkOutline } from "react-icons/md";
+import { MdOutlineSchool } from "react-icons/md";
+import { TbCalendarTime } from "react-icons/tb";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -23,7 +26,7 @@ function CustomTabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography component="span">{children}</Typography>{" "}
+          <Typography component="span">{children}</Typography>
         </Box>
       )}
     </div>
@@ -74,10 +77,7 @@ export default function TabsCom() {
             <div className="bg-green-500 p-4 text-white font-bold text-center flex flex-row">
               <div className="w-full flex items-center gap-2">
                 <CgProfile color="#F66C59" className="mr-2" />
-                <span className="w-full flex justify-start">
-                  {" "}
-                  Mohamad Ganji
-                </span>
+                <span className="w-full flex justify-start">Mohamad Ganji</span>
               </div>
             </div>
             <div className="bg-green-500 p-4 text-white font-bold text-center flex flex-row">
@@ -91,7 +91,6 @@ export default function TabsCom() {
                 <IoMail color="#F66C59" className="mr-2" />
 
                 <span className="w-full flex justify-start">
-                  {" "}
                   Mohamad.ganjif@gmail.com
                 </span>
               </div>
@@ -110,7 +109,80 @@ export default function TabsCom() {
           <span className="">{t("main.secondPart.language")}</span>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          {t("main.secondPart.secondButton")}
+          <div className="flex items-start justify-start flex-col">
+            <p className="text-2xl font-semibold">
+              {t("main.secondPart.journey")}
+            </p>
+            <div className="grid grid-cols-2 gap-2 w-full mt-3 mb-[100px] w-full">
+              <div className="flex flex-col">
+                <div className="flex flex-col">
+                  <div className="flex items-center mb-3">
+                    <MdOutlineWorkOutline
+                      color="#F66C59"
+                      className="mr-2 flex"
+                    />
+                    <p className="text-mainOrange">
+                      {t("main.secondPart.exprience")}
+                    </p>
+                  </div>
+                  <div className="w-5 h-5 rounded-full bg-mainOrange hover:translate-y-24 duration-500"></div>
+                  <div className="border-r-2 border-gray-500 h-24 w-0 border-gray ml-[10px]">
+                    <p className="w-[248px] ml-3  flex gap-2 flex-col">
+                      {t("main.secondPart.secondInfoWork")} <br />
+                      <p className="text-mainOrange flex gap-2 mt-7">
+                        <TbCalendarTime color="#F66C59" className="" />
+                        {t("main.secondPart.secondDateWork")}{" "}
+                      </p>
+                    </p>
+                  </div>
+                </div>
+                <div className="flex flex-col mt-10">
+                  <div className="w-5 h-5 rounded-full bg-mainOrange hover:translate-y-24 duration-500"></div>
+                  <div className="border-r-2 border-gray-500 h-24 w-0 border-gray ml-[10px]">
+                    <p className="w-[248px] ml-3  flex gap-2 flex-col">
+                      {t("main.secondPart.firstInfoWork")} <br />
+                      <p className="text-mainOrange flex gap-2 mt-7">
+                        <TbCalendarTime color="#F66C59" className="" />
+                        {t("main.secondPart.firstDateWork")}{" "}
+                      </p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-start flex-col">
+                <div className="flex items-center">
+                  <MdOutlineSchool
+                    color="#F66C59"
+                    className="mr-2 flex items-center"
+                  />
+                  <p className="text-mainOrange">
+                    {t("main.secondPart.education")}
+                  </p>
+                </div>
+                <div className="w-5 h-5 rounded-full bg-mainOrange hover:translate-y-24 duration-500 mt-3"></div>
+                <div className="border-r-2 border-gray-500 h-24 w-0 border-gray ml-[10px]">
+                  <p className="w-[248px] ml-3  flex gap-2 flex-col">
+                    {t("main.secondPart.secondInfoEducation")} <br />
+                    <p className="text-mainOrange flex gap-2 mt-14">
+                      <TbCalendarTime color="#F66C59" className="" />
+                      {t("main.secondPart.secondDateEducation")}{" "}
+                    </p>
+                  </p>
+                </div>
+                <div className="w-5 h-5 rounded-full bg-mainOrange hover:translate-y-24 duration-500 mt-12"></div>
+                <div className="border-r-2 border-gray-500 h-24 w-0 border-gray ml-[10px]">
+                  <p className="w-[248px] ml-3  flex gap-2 flex-col">
+                    {t("main.secondPart.firstInfoEducation")} <br />
+                    {t("main.secondPart.firstInfoEducation2")}
+                    <p className="text-mainOrange flex gap-2 mt-7">
+                      <TbCalendarTime color="#F66C59" className="" />
+                      {t("main.secondPart.firstDateEducation")}{" "}
+                    </p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
           {t("main.secondPart.thirdButton")}

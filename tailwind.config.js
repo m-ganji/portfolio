@@ -5,6 +5,7 @@ export default {
   theme: {
     colors: {
       lightBg: "#FFF9F7",
+      gray: "#D3D3D3",
       mainOrange: "#F66C59",
       black: "#000000",
     },
