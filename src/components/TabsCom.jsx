@@ -70,7 +70,12 @@ export default function TabsCom() {
             <Tab label={t("main.secondPart.thirdButton")} {...a11yProps(2)} />
           </Tabs>
         </Box>
-        <CustomTabPanel value={value} index={0} width={100}>
+        <CustomTabPanel
+          value={value}
+          index={0}
+          width={100}
+          className="h-[460px]"
+        >
           {t("main.secondPart.paragraph")}
 
           <div className="grid grid-cols-2 gap-2">
@@ -105,15 +110,15 @@ export default function TabsCom() {
           <span className="text-mainOrange mt-3">
             {t("main.secondPart.skills")}
           </span>
-          <div className="border-t-2 border-gray-500 w-11/12 mt-3 mb-3"></div>
+          <div className="border-t-2 border-gray w-11/12 mt-3 mb-3"></div>
           <span className="">{t("main.secondPart.language")}</span>
         </CustomTabPanel>
-        <CustomTabPanel value={value} index={1}>
+        <CustomTabPanel value={value} index={1} className="h-[460px]">
           <div className="flex items-start justify-start flex-col">
             <p className="text-2xl font-semibold">
               {t("main.secondPart.journey")}
             </p>
-            <div className="grid grid-cols-2 gap-2 w-full mt-3 mb-[100px] w-full">
+            <div className="grid grid-cols-2 gap-2 w-full mt-3 mb-[100px]">
               <div className="flex flex-col">
                 <div className="flex flex-col">
                   <div className="flex items-center mb-3">
@@ -184,8 +189,20 @@ export default function TabsCom() {
             </div>
           </div>
         </CustomTabPanel>
-        <CustomTabPanel value={value} index={2}>
-          {t("main.secondPart.thirdButton")}
+        <CustomTabPanel value={value} index={2} className="h-[460px]">
+          <p className="text-2xl font-semibold">Tools I Use Everyday</p>
+          <p className="text-xl font-semibold mt-10">skills</p>
+          <div className="border-t-2 border-gray w-11/12 mt-3 mb-3"></div>
+          <p>JavaScript</p>
+          <p>Html & Css</p>
+          <p>React</p>
+          <p>Tailwind</p>
+          <p>Bootstrap</p>
+          <p>Mui</p>
+          <p>Redux</p>
+          <p>Next</p>
+          <p>Hardworking</p>
+          <p>Teamwork</p>
         </CustomTabPanel>
       </Box>
     </div>
