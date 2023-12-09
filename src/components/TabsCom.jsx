@@ -95,15 +95,15 @@ export default function TabsCom() {
               <div className="w-full flex items-center gap-2">
                 <IoMail color="#F66C59" className="mr-2" />
 
-                <span className="w-full flex justify-start">
-                  Mohamad.ganjif@gmail.com
-                </span>
+                <span className="w-full"> {t("main.secondPart.calender")}</span>
               </div>
             </div>
             <div className="bg-green-500 p-4 text-white font-bold text-center flex flex-row">
               <div className="flex items-center justify-around">
                 <CiCalendar color="#F66C59" className="mr-2" />
-                <span className="w-full"> {t("main.secondPart.calender")}</span>
+                <span className="w-full flex justify-start text-sm sm:text-base">
+                  Mohamad.ganjif@gmail.com
+                </span>
               </div>
             </div>
           </div>

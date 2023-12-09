@@ -21,7 +21,7 @@ export default function Services({ theme }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-16 ">
           <div className="border border-gray p-4 flex justify-center items-center relative">
             <PiNoteDuotone
-              className="w-[100px] h-[100px] mb-48 absolute bg-lightBg"
+              className="w-[100px] h-[100px] mb-48 absolute bg-lightBg dark:bg-black"
               color="#F66C59"
             />
             <div className="relative mt-10">
@@ -29,16 +29,17 @@ export default function Services({ theme }) {
                 Web Design{" "}
               </h2>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
+                Elevate user experiences with visually stunning layouts and
+                intuitive interfaces, blending creativity with functionality.
+                {/* Persian: ارتقای تجربه کاربر با طرح بندی های خیره کننده از نظر بصری و رابط های کاربری گویا
+                Persian: ترکیب خلاقیت با کارکرد */}
               </p>
             </div>
           </div>
 
-          <div className="border border-gray p-4 flex justify-center items-center">
+          <div className="border border-gray p-4 flex justify-center items-center mt-14 sm:mt-0">
             <MdOutlineDeveloperMode
-              className="w-[100px] h-[100px] mb-48 absolute bg-lightBg"
+              className="w-[100px] h-[100px] mb-48 absolute bg-lightBg dark:bg-black"
               color="#F66C59"
             />
             <div className="relative mt-10">
@@ -46,16 +47,17 @@ export default function Services({ theme }) {
                 Web Developement
               </h2>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
+                Transform design concepts into responsive, interactive websites,
+                bridging front-end aesthetics with back-end functionality.
+                {/* Persian: تبدیل مفاهیم طراحی به وب سایت های پاسخگو و تعاملی
+                Persian: پیوند زیبایی شناسی frontend با کارکرد back-end */}
               </p>
             </div>
           </div>
 
-          <div className="border border-gray p-4 flex justify-center items-center">
+          <div className="border border-gray p-4 flex justify-center items-center mt-14 sm:mt-0">
             <SlDiamond
-              className="w-[100px] h-[100px] mb-48 absolute bg-lightBg"
+              className="w-[100px] h-[100px] mb-48 absolute bg-lightBg dark:bg-black"
               color="#F66C59"
             />
             <div className="relative mt-10">
@@ -63,9 +65,11 @@ export default function Services({ theme }) {
                 App developer
               </h2>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
+                Shape cutting-edge mobile experiences with platform-specific
+                languages, delivering seamless functionality in the palm of
+                users' hands.
+                {/* Persian: شکل دادن به تجربه های موبایلی پیشرفته با زبان های خاص پلتفرم
+                Persian: ارائه عملکرد یکپارچه در کف دست کاربران */}
               </p>
             </div>
           </div>
