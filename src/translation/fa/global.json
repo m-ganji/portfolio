@@ -32,7 +32,12 @@
       "firstInfoEducation": "دیلم رشته ریاضی ",
       "firstInfoEducation2": " و فیزیک",
       "secondDateEducation": "1397 - 1402",
-      "secondInfoEducation": "کارشناسی مهندسی صنایع"
+      "secondInfoEducation": "کارشناسی مهندسی صنایع",
+      "tools": "چیزهایی که در طول روز با آنها کار می کنم",
+      "skill": "مهارت ها"
+    },
+    "thirdPart": {
+      "header": "خدمات من"
     }
   }
 }

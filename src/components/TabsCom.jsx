@@ -79,7 +79,7 @@ export default function TabsCom() {
           {t("main.secondPart.paragraph")}
 
           <div className="grid grid-cols-2 gap-2">
-            <div className="bg-green-500 p-4 text-white font-bold text-center flex flex-row">
+            <div className="bg-green-500 p-4 text-white font-bold text-center flex flex-row justify-center items-center">
               <div className="w-full flex items-center gap-2">
                 <CgProfile color="#F66C59" className="mr-2" />
                 <span className="w-full flex justify-start">Mohamad Ganji</span>
@@ -190,8 +190,10 @@ export default function TabsCom() {
           </div>
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2} className="h-[460px]">
-          <p className="text-2xl font-semibold">Tools I Use Everyday</p>
-          <p className="text-xl font-semibold mt-10">skills</p>
+          <p className="text-2xl font-semibold">{t("main.secondPart.tools")}</p>
+          <p className="text-xl font-semibold mt-10">
+            {t("main.secondPart.skill")}
+          </p>
           <div className="border-t-2 border-gray w-11/12 mt-3 mb-3"></div>
           <p>JavaScript</p>
           <p>Html & Css</p>

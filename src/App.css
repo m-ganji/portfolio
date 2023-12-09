@@ -22,5 +22,30 @@ button#simple-tab-2 {
 }
 
 .MuiBox-root.css-dyrtm4 {
-  width: 60%;
+  width: 100%;
+}
+
+/* Custom scrollbar */
+/* For WebKit browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f66c59;
+  border-radius: 6px;
+}
+
+/* For Firefox */
+* {
+  scrollbar-color: #f66c59 #f5f5f5;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #f66c59;
+  border-radius: 6px;
 }

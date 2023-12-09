@@ -17,6 +17,9 @@ import { FaArrowTurnDown } from "react-icons/fa6";
 import TabsCom from "./components/TabsCom";
 import useLanguage from "./components/useLanguage";
 import { AiOutlineExclamation } from "react-icons/ai";
+import Services from "./components/Services";
+import lightDot from "../src/assets/dots-light.svg";
+import darkDot from "../src/assets/dots-dark.svg";
 
 function App() {
   // switching the theme
@@ -77,20 +80,17 @@ function App() {
             <CiLight />
           </button>
         </div>
-        <button onClick={() => handleChangeLanguage("en")}>en</button>
-        <button onClick={() => handleChangeLanguage("fa")}>fa</button>
       </header>
+      <button onClick={() => handleChangeLanguage("en")}>en</button>
+      <button onClick={() => handleChangeLanguage("fa")}>fa</button>
       <main className="mx-[10%] flex flex-col">
         <div className="first_part flex">
-          <section className="mt-[7.5%] w-1/2 dark:text-lightBg">
-            <h1 className="text-mainOrange">
-              {" "}
-              {t("main.firstPart.firstLine")}
-            </h1>
+          <section className="mt-[7.5%] w-full dark:text-lightBg sm:w-1/2">
+            <h1 className="text-mainOrange">{t("main.firstPart.firstLine")}</h1>
             <h4 className="text-6xl font-semibold mt-5">
               {t("main.firstPart.secondLine")}
             </h4>
-            <p className="mt-5">{t("main.firstPart.thirdLine")}</p>{" "}
+            <p className="mt-5">{t("main.firstPart.thirdLine")}</p>
             <div className="flex gap-14">
               <ButtonCom
                 title={t("main.firstPart.secondButton")}
@@ -109,7 +109,7 @@ function App() {
               <FaInstagram />
             </div>
           </section>
-          <section className="mt-[7.5%] w-1/2 flex justify-end">
+          <section className="hidden sm:flex w-1/2 mt-[7.5%] sm:justify-end">
             <div className="">
               <div>
                 <img
@@ -140,16 +140,19 @@ function App() {
         </div>
         <div className="second_part flex justify-between items-center mt-28 flex-col">
           <FaArrowTurnDown color="#F66C59" className="mb-28" />
-          <div className="flex justify-center items-center dark:text-lightBg mb-16">
-            <AiOutlineExclamation color="#F66C59" />
+          <div className="flex justify-center items-center dark:text-lightBg mb-16 font-bold">
+            {theme === "light" ? <img src={lightDot} /> : <img src={darkDot} />}
             {t("main.secondPart.header")}
           </div>
           <div className="flex w-full">
-            <div className="w-1/2">test</div>
-            <div className="w-1/2 dark:text-lightBg">
+            <div className="w-1/2 hidden sm:flex">test</div>
+            <div className="w-full dark:text-lightBg sm:w-1/2">
               <TabsCom />
             </div>
           </div>
+        </div>
+        <div className="third_part">
+          <Services theme={theme} />
         </div>
       </main>
 
