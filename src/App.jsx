@@ -20,6 +20,7 @@ import { AiOutlineExclamation } from "react-icons/ai";
 import Services from "./components/Services";
 import lightDot from "../src/assets/dots-light.svg";
 import darkDot from "../src/assets/dots-dark.svg";
+import Projects from "./components/Projects";
 
 function App() {
   // switching the theme
@@ -142,7 +143,7 @@ function App() {
           <FaArrowTurnDown color="#F66C59" className="mb-28" />
           <div className="flex justify-center items-center dark:text-lightBg mb-16 font-bold">
             {theme === "light" ? <img src={lightDot} /> : <img src={darkDot} />}
-            {t("main.secondPart.header")}
+            <p className="text-2xl font-bold">{t("main.secondPart.header")}</p>
           </div>
           <div className="flex w-full">
             <div className="w-1/2 hidden sm:flex">test</div>
@@ -153,6 +154,9 @@ function App() {
         </div>
         <div className="third_part">
           <Services theme={theme} />
+        </div>
+        <div className="fourth_part mt-14 mb-[800px]">
+          <Projects theme={theme} />
         </div>
       </main>
 

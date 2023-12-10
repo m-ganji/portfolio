@@ -8,14 +8,14 @@ import { PiNoteDuotone } from "react-icons/pi";
 export default function Services({ theme }) {
   const { t, handleChangeLanguage } = useLanguage();
   return (
-    <div className="relative mb-96">
-      <div className="flex justify-center items-start">
+    <div className="relative">
+      <div className="flex justify-center items-center">
         {theme === "light" ? (
           <img src={lightDot} alt="Light Dot" />
         ) : (
           <img src={darkDot} alt="Dark Dot" />
         )}
-        <p> {t("main.thirdPart.header")}</p>
+        <p className="text-2xl font-bold"> {t("main.thirdPart.header")}</p>
       </div>
       <div className="mt-5">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-16 ">

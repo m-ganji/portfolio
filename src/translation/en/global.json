@@ -38,6 +38,9 @@
     },
     "thirdPart": {
       "header": "My Services"
+    },
+    "fourthPart": {
+      "title": "Latest Projects"
     }
   }
 }

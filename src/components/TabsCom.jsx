@@ -79,23 +79,26 @@ export default function TabsCom() {
           {t("main.secondPart.paragraph")}
 
           <div className="grid grid-cols-2 gap-2">
-            <div className="bg-green-500 p-4 text-white font-bold text-center flex flex-row justify-center items-center">
+            <div className="p-4 text-white font-bold text-center flex flex-row justify-center items-center">
               <div className="w-full flex items-center gap-2">
                 <CgProfile color="#F66C59" className="mr-2" />
                 <span className="w-full flex justify-start">Mohamad Ganji</span>
               </div>
             </div>
-            <div className="bg-green-500 p-4 text-white font-bold text-center flex flex-row">
+            <div className="p-4 text-white font-bold text-center flex flex-row">
               <div className="flex items-center justify-around">
                 <BiPhoneCall color="#F66C59" className="mr-2" />
                 <span className="w-full">+989196273474</span>
               </div>
             </div>
-            <div className="bg-yellow-500 p-4 text-white font-bold text-center">
+            <div className="p-4 text-white font-bold text-center">
               <div className="w-full flex items-center gap-2">
                 <IoMail color="#F66C59" className="mr-2" />
 
-                <span className="w-full"> {t("main.secondPart.calender")}</span>
+                <span className="w-full flex justify-start">
+                  {" "}
+                  {t("main.secondPart.calender")}
+                </span>
               </div>
             </div>
             <div className="bg-green-500 p-4 text-white font-bold text-center flex flex-row">
@@ -113,12 +116,16 @@ export default function TabsCom() {
           <div className="border-t-2 border-gray w-11/12 mt-3 mb-3"></div>
           <span className="">{t("main.secondPart.language")}</span>
         </CustomTabPanel>
-        <CustomTabPanel value={value} index={1} className="h-[460px]">
+        <CustomTabPanel
+          value={value}
+          index={1}
+          className="h-[460px] mb-[350px] sm:mb-[0px]"
+        >
           <div className="flex items-start justify-start flex-col">
             <p className="text-2xl font-semibold">
               {t("main.secondPart.journey")}
             </p>
-            <div className="grid grid-cols-2 gap-2 w-full mt-3 mb-[100px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full mt-3 mb-[100px]">
               <div className="flex flex-col">
                 <div className="flex flex-col">
                   <div className="flex items-center mb-3">
@@ -154,7 +161,7 @@ export default function TabsCom() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-start flex-col">
+              <div className="flex items-start flex-col mt-5 sm:mt-0">
                 <div className="flex items-center">
                   <MdOutlineSchool
                     color="#F66C59"
@@ -203,6 +210,7 @@ export default function TabsCom() {
           <p>Mui</p>
           <p>Redux</p>
           <p>Next</p>
+          <p>Wordpress</p>
           <p>Hardworking</p>
           <p>Teamwork</p>
         </CustomTabPanel>
