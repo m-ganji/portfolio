@@ -8,6 +8,9 @@ export default {
       gray: "#D3D3D3",
       mainOrange: "#F66C59",
       black: "#29283E",
+      lightWork: "#FEF8F6",
+      darkWork: "#27263A",
+      border: "#F5F1F1",
     },
     extend: {
       fontFamily: {

@@ -1,16 +1,12 @@
 import useLanguage from "./useLanguage";
 import lightDot from "../assets/dots-light.svg";
 import darkDot from "../assets//dots-dark.svg";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
-// import { Pagination } from "swiper/modules";
-
-// Import Swiper styles
+import firstSite from "../assets/firstSite.png";
 import "swiper/css";
 import "swiper/css/pagination";
-
 import "../App.css";
+import { Pagination } from "swiper/modules";
 
 export default function Projects({ theme }) {
   const { t, handleChangeLanguage } = useLanguage();
@@ -24,8 +20,8 @@ export default function Projects({ theme }) {
   }
 
   return (
-    <div className="flex">
-      <div className="w-1/2 flex justify-start items-baseline">
+    <div className="flex flex-col sm:flex-row">
+      <div className="w-full flex justify-center items-center sm:w-1/4 sm:justify-start">
         {theme === "light" ? (
           <img src={lightDot} alt="Light Dot" width={22} height={22} />
         ) : (
@@ -33,57 +29,65 @@ export default function Projects({ theme }) {
         )}
         <p className="text-2xl font-bold ml-3"> {t("main.fourthPart.title")}</p>
       </div>
-      <div className="w-full">
+      <div className="w-full sm:w-3/4">
         <Swiper
-          slidesPerView={"auto"}
-          centeredSlides={true}
-          spaceBetween={30}
+          spaceBetween={50}
+          slidesPerView={2}
           pagination={{
             clickable: true,
           }}
           modules={[Pagination]}
-          className="mySwiper grid-cols-3"
         >
-          <SwiperSlide
-            className="relative w-full h-[300px] flex items-center justify-center
-            bg-tertiary dark:bg-secondary/40 xl:bg-work_project_bg_light
-            xl:dark:bg-work_project_bg_dark xl:bg-[110%] xl:bg-no-repeat overflow-hidden dark:bg-black bg-lightBg"
-          >
-            Slide 1 dassasa asd sa dsad sa da dsa dsad sadqweassd saas dsadas
-            dad sa Slide 1 dassasa asd sa dsad sa da dsa dsad sadqweassd saas
-            dsadas dad saSlide 1 dassasa asd sa dsad sa da dsa dsad sadqweassd
-            saas dsadas dad saSlide 1 dassasa asd sa dsad sa da dsa dsad
-            sadqweassd saas dsadas dad saSlide 1 dassasa asd sa dsad sa da dsa
-            dsad sadqweassd saas dsadas dad saSlide 1 dassasa asd sa dsad sa da
-            dsa dsad sadqweassd saas dsadas dad sa
+          <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-lg shadow-2xl mb-56">
+            <div
+              className="relative justify-center
+              bg-lightWork dark:bg-darkWork xl:bg-work_project_bg_light
+               xl:bg-[110%] xl:bg-no-repeat overflow-hidden p-11 h-3/4 w-full flex items-start border-gray rounded-lg "
+            >
+              <img
+                src={firstSite}
+                className="absolute bottom-0 w-1/2 h-1/2 flex justify-center items-center shadow-2xl"
+                alt="first website"
+              />
+            </div>
+            <div className="h-1/4">
+              <p>Sedreh Website1</p>
+              <span>test</span>
+            </div>
           </SwiperSlide>
-
-          <SwiperSlide
-            className="relative w-full h-[300px] flex items-center justify-center
-            bg-tertiary dark:bg-secondary/40 xl:bg-work_project_bg_light
-            xl:dark:bg-work_project_bg_dark xl:bg-[110%] xl:bg-no-repeat overflow-hidden dark:bg-black bg-lightBg"
-          >
-            Slide 1 dassasa asd sa dsad sa da dsa dsad sadqweassd saas dsadas
-            dad sa Slide 1 dassasa asd sa dsad sa da dsa dsad sadqweassd saas
-            dsadas dad saSlide 1 dassasa asd sa dsad sa da dsa dsad sadqweassd
-            saas dsadas dad saSlide 1 dassasa asd sa dsad sa da dsa dsad
-            sadqweassd saas dsadas dad saSlide 1 dassasa asd sa dsad sa da dsa
-            dsad sadqweassd saas dsadas dad saSlide 1 dassasa asd sa dsad sa da
-            dsa dsad sadqweassd saas dsadas dad sa{" "}
-          </SwiperSlide>
-
-          <SwiperSlide
-            className="relative w-full h-[300px] flex items-center justify-center
-            bg-tertiary dark:bg-secondary/40 xl:bg-work_project_bg_light
-            xl:dark:bg-work_project_bg_dark xl:bg-[110%] xl:bg-no-repeat overflow-hidden dark:bg-black bg-lightBg"
-          >
-            Slide 1 dassasa asd sa dsad sa da dsa dsad sadqweassd saas dsadas
-            dad sa Slide 1 dassasa asd sa dsad sa da dsa dsad sadqweassd saas
-            dsadas dad saSlide 1 dassasa asd sa dsad sa da dsa dsad sadqweassd
-            saas dsadas dad saSlide 1 dassasa asd sa dsad sa da dsa dsad
-            sadqweassd saas dsadas dad saSlide 1 dassasa asd sa dsad sa da dsa
-            dsad sadqweassd saas dsadas dad saSlide 1 dassasa asd sa dsad sa da
-            dsa dsad sadqweassd saas dsadas dad sa{" "}
+          <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-lg p-11">
+            <div
+              className="relative justify-center
+              bg-lightWork dark:bg-darkWork xl:bg-work_project_bg_light
+               xl:bg-[110%] xl:bg-no-repeat overflow-hidden p-11 h-3/4 w-full flex items-start border-gray rounded-lg "
+            >
+              <img
+                src={firstSite}
+                className="absolute bottom-0 shadow-2xl w-1/2 h-1/2 flex justify-center items-center "
+                alt="first website"
+              />
+            </div>
+            <div className="h-1/4">
+              <p>Sedreh Website1</p>
+              <span>test</span>
+            </div>
+          </SwiperSlide>{" "}
+          <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-lg ">
+            <div
+              className="relative justify-center
+              bg-lightWork dark:bg-darkWork xl:bg-work_project_bg_light
+               xl:bg-[110%] xl:bg-no-repeat overflow-hidden p-11 h-3/4 w-full flex items-start border-gray rounded-lg "
+            >
+              <img
+                src={firstSite}
+                className="absolute bottom-0 shadow-2xl w-1/2 h-1/2 flex justify-center items-center "
+                alt="first website"
+              />
+            </div>
+            <div className="h-1/4">
+              <p>Sedreh Website1</p>
+              <span>test</span>
+            </div>
           </SwiperSlide>
         </Swiper>
       </div>
