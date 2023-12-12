@@ -37,9 +37,9 @@ export default function Services({ theme }) {
             </div>
           </div>
 
-          <div className="border border-gray p-4 flex justify-center items-center mt-14 sm:mt-0">
+          <div className="border border-gray p-4 flex justify-center items-center mt-14 sm:mt-0 bg-darkGray dark:bg-darkGrayMode">
             <MdOutlineDeveloperMode
-              className="w-[100px] h-[100px] mb-48 absolute bg-lightBg dark:bg-black"
+              className="w-[100px] h-[100px] mb-48 absolute bg-transparent dark:bg-black"
               color="#F66C59"
             />
             <div className="relative mt-10">

@@ -8,6 +8,8 @@ import ButtonCom from "./components/ButtonCom";
 import { PiTelegramLogoThin } from "react-icons/pi";
 import { LuDownload } from "react-icons/lu";
 import { FaLinkedinIn } from "react-icons/fa";
+import { FaTelegram } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { useState } from "react";
@@ -21,6 +23,8 @@ import Services from "./components/Services";
 import lightDot from "../src/assets/dots-light.svg";
 import darkDot from "../src/assets/dots-dark.svg";
 import Projects from "./components/Projects";
+import Review from "./components/Review";
+import Footer from "./components/Footer";
 
 function App() {
   // switching the theme
@@ -108,6 +112,8 @@ function App() {
               <FaLinkedinIn />
               <FaGithub />
               <FaInstagram />
+              <FaTelegram />
+              <FaWhatsapp />
             </div>
           </section>
           <section className="hidden sm:flex w-1/2 mt-[7.5%] sm:justify-end">
@@ -155,14 +161,16 @@ function App() {
         <div className="third_part">
           <Services theme={theme} />
         </div>
-        <div className="fourth_part mt-14 mb-[800px]">
+        <div className="fourth_part mt-14">
           <Projects theme={theme} />
         </div>
+        <div className="fourth_part mt-40">
+          <Review theme={theme} />
+        </div>
       </main>
-
-      {/* <footer className="mx-[10%]">
-          <p>&copy; 2023 Your Website Name. All rights reserved.</p>
-        </footer> */}
+      <footer className="">
+        <Footer theme={theme} />
+      </footer>
     </div>
   );
 }

@@ -10,15 +10,6 @@ import { Pagination } from "swiper/modules";
 
 export default function Projects({ theme }) {
   const { t, handleChangeLanguage } = useLanguage();
-
-  {
-    /* {theme === "light" ? (
-    <p>roshan</p>
-  ) : (
-    <p className="dark:bg-black">tarik</p>
-  )} */
-  }
-
   return (
     <div className="flex flex-col sm:flex-row">
       <div className="w-full flex justify-center items-center sm:w-1/4 sm:justify-start">
@@ -72,7 +63,7 @@ export default function Projects({ theme }) {
               <span>test</span>
             </div>
           </SwiperSlide>{" "}
-          <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-lg ">
+          <SwiperSlide className="dark:bg-black bg-darkGray border border-gray rounded-lg ">
             <div
               className="relative justify-center
               bg-lightWork dark:bg-darkWork xl:bg-work_project_bg_light

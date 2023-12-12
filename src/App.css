@@ -93,3 +93,28 @@ img.absolute.bottom-0.shadow-2xl.w-1\/2.h-1\/2.flex.justify-center.items-center 
 span.swiper-pagination-bullet {
   background-color: #f66c59;
 }
+
+@media (max-width: 640px) {
+  .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .swiper-slide.bg-darkGray.dark\:bg-darkGrayMode.border.border-gray.rounded-2xl.swiper-slide-active {
+    width: 100% !important;
+  }
+  .swiper-slide.bg-darkGray.dark\:bg-darkGrayMode.border.border-gray.rounded-2xl.swiper-slide-next {
+    width: 100% !important;
+  }
+  .swiper-slide.bg-darkGray.dark\:bg-darkGrayMode.border.border-gray.rounded-2xl {
+    width: 100% !important;
+  }
+}
