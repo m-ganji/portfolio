@@ -38,11 +38,11 @@ button#simple-tab-2 {
 
 /* For Firefox */
 * {
-  scrollbar-color: #f66c59 #f5f5f5;
+  scrollbar-color: #f66c59 #fff9f7;
 }
 
 *::-webkit-scrollbar-track {
-  background-color: #f5f5f5;
+  background-color: #fff9f7;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -117,4 +117,65 @@ span.swiper-pagination-bullet {
   .swiper-slide.bg-darkGray.dark\:bg-darkGrayMode.border.border-gray.rounded-2xl {
     width: 100% !important;
   }
+}
+
+:root {
+  --swiper-theme-color: ;
+}
+
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: #f66c59 !important;
+  border-style: dotted !important;
+}
+
+/* .MuiOutlinedInput-root .Mui-focused fieldset {
+  border-color: #f66c59;
+} */
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  border-color: #f66c59 !important;
+}
+
+.MuiBox-root.css-fr8qa9.Mui-focused {
+  border: 1px solid #f66c59 !important;
+  border-radius: 4px !important; /* Optional: Add border-radius for rounded corners */
+}
+
+.MuiTextField-root
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #f66c59 !important;
+}
+
+/* Change label color on focus */
+.MuiTextField-root .MuiFormLabel-root.Mui-focused {
+  color: #f66c59 !important;
+}
+
+textarea:focus {
+  letter-spacing: inherit;
+  /* padding: 4px 0 5px; */
+  border: 0;
+  box-sizing: content-box;
+  background: none;
+  height: 1.4375em;
+  margin: 0;
+  width: 100%;
+  -webkit-animation-name: mui-auto-fill-cancel;
+  animation-name: mui-auto-fill-cancel;
+  -webkit-animation-duration: 10ms;
+  animation-duration: 10ms;
+  padding: 16.5px 14px;
+  padding-right: 0;
+  outline: none !important;
+  border: 1px solid #f66c59;
+  box-sizing: border-box;
+}
+
+/* textarea::placeholder {
+  padding: 16.5px 14px;
+} */
+
+textarea {
+  padding: 16.5px 14px !important;
 }

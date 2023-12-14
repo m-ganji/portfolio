@@ -18,13 +18,13 @@ import { LiaLanguageSolid } from "react-icons/lia";
 import { FaArrowTurnDown } from "react-icons/fa6";
 import TabsCom from "./components/TabsCom";
 import useLanguage from "./components/useLanguage";
-import { AiOutlineExclamation } from "react-icons/ai";
 import Services from "./components/Services";
 import lightDot from "../src/assets/dots-light.svg";
 import darkDot from "../src/assets/dots-dark.svg";
 import Projects from "./components/Projects";
 import Review from "./components/Review";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
 function App() {
   // switching the theme
@@ -46,13 +46,16 @@ function App() {
   const { t, handleChangeLanguage } = useLanguage();
 
   return (
-    <div className="bg-lightBg dark:bg-black dark:text-lightBg w-full h-full font-sans">
-      <header className="h-[10%] flex justify-between mx-[10%]">
-        <img src={Logo} alt="" className="h-20" />
-        <div className="flex justify-start items-baseline gap-5 p-2 dark:text-lightBg">
+    <div className="bg-lightBg dark:bg-black dark:text-lightBg w-full h-full font-sans z-10">
+      <header className="h-[10%] flex justify-between shadow-xl fixed bg-lightBg dark:bg-black w-full z-20">
+        <button onClick={() => handleChangeLanguage("en")}>en</button>
+        <button onClick={() => handleChangeLanguage("fa")}>fa</button>
+        <img src={Logo} alt="" className="h-20 ml-[10%]" />
+        <div className="flex justify-start items-center gap-5 p-2 dark:text-lightBg mr-[10%]">
           <div className="hover:border-b hover:border-mainOrange hover:text-mainOrange">
             {t("header.firstButton")}
           </div>
+
           <div className="hover:border-b hover:border-mainOrange hover:text-mainOrange">
             {t("header.secondButton")}
           </div>
@@ -86,8 +89,6 @@ function App() {
           </button>
         </div>
       </header>
-      <button onClick={() => handleChangeLanguage("en")}>en</button>
-      <button onClick={() => handleChangeLanguage("fa")}>fa</button>
       <main className="mx-[10%] flex flex-col">
         <div className="first_part flex">
           <section className="mt-[7.5%] w-full dark:text-lightBg sm:w-1/2">
@@ -166,6 +167,9 @@ function App() {
         </div>
         <div className="fourth_part mt-40">
           <Review theme={theme} />
+        </div>
+        <div className="fifth_part mt-40">
+          <Contact theme={theme} />
         </div>
       </main>
       <footer className="">

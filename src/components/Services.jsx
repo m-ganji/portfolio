@@ -19,9 +19,9 @@ export default function Services({ theme }) {
       </div>
       <div className="mt-5">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-16 ">
-          <div className="border border-gray p-4 flex justify-center items-center relative">
+          <div className="border border-gray p-4 flex justify-center items-center relative rounded-2xl">
             <PiNoteDuotone
-              className="w-[100px] h-[100px] mb-48 absolute bg-lightBg dark:bg-black"
+              className="w-[80px] h-[80px] mb-44 absolute bg-lightBg dark:bg-black"
               color="#F66C59"
             />
             <div className="relative mt-10">
@@ -37,9 +37,9 @@ export default function Services({ theme }) {
             </div>
           </div>
 
-          <div className="border border-gray p-4 flex justify-center items-center mt-14 sm:mt-0 bg-darkGray dark:bg-darkGrayMode">
+          <div className="border border-gray p-4 flex justify-center items-center mt-14 sm:mt-0 bg-darkGray dark:bg-darkGrayMode rounded-2xl">
             <MdOutlineDeveloperMode
-              className="w-[100px] h-[100px] mb-48 absolute bg-transparent dark:bg-black"
+              className="w-[80px] h-[80px] mb-44 absolute bg-transparent dark:bg-black"
               color="#F66C59"
             />
             <div className="relative mt-10">
@@ -55,9 +55,9 @@ export default function Services({ theme }) {
             </div>
           </div>
 
-          <div className="border border-gray p-4 flex justify-center items-center mt-14 sm:mt-0">
+          <div className="border border-gray p-4 flex justify-center items-center mt-14 sm:mt-0 rounded-2xl">
             <SlDiamond
-              className="w-[100px] h-[100px] mb-48 absolute bg-lightBg dark:bg-black"
+              className="w-[80px] h-[80px] mb-44 absolute bg-lightBg dark:bg-black"
               color="#F66C59"
             />
             <div className="relative mt-10">

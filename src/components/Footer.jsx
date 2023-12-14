@@ -8,13 +8,6 @@ import { FaInstagram } from "react-icons/fa";
 export default function Footer({ theme }) {
   const { t, handleChangeLanguage } = useLanguage();
 
-  {
-    /* {theme === "light" ? (
-    <p>roshan</p>
-  ) : (
-    <p className="dark:bg-black">tarik</p>
-  )} */
-  }
   return (
     <div className="mt-24">
       <div className="w-full h-80 bg-darkGray dark:bg-darkGrayMode flex justify-center items-center flex-col ">
@@ -25,7 +18,7 @@ export default function Footer({ theme }) {
           {t("main.footer.button")}
         </button>
       </div>
-      <div className="bg-black  w-full h-40 flex flex-col justify-start items-center">
+      <div className="bg-black w-full h-24 flex flex-col justify-start items-center">
         <div className="flex mt-5 gap-10">
           <FaLinkedinIn color="#F66C59" />
           <FaGithub color="#F66C59" />
