@@ -172,9 +172,9 @@ textarea:focus {
   box-sizing: border-box;
 }
 
-/* textarea::placeholder {
-  padding: 16.5px 14px;
-} */
+textarea:focus && svg.absolute.right-5.top-5 {
+  display: none;
+}
 
 textarea {
   padding: 16.5px 14px !important;

@@ -14,6 +14,7 @@ export default function Contact({ theme }) {
   const { t, handleChangeLanguage } = useLanguage();
   const [inputName, setInputName] = useState("");
   const [inputEmail, setInputEmail] = useState("");
+  const [inputMessage, setinputMessage] = useState("");
 
   const handleInputName = (event) => {
     setInputName(event.target.value);
@@ -21,16 +22,10 @@ export default function Contact({ theme }) {
   const handleInputEmail = (event) => {
     setInputEmail(event.target.value);
   };
-  //   {theme === "light" ? (
-  //     <img src={lightDot} alt="Light Dot" />
-  //   ) : (
-  //     <img src={darkDot} alt="Dark Dot" />
-  //   )}
-  const [text, setText] = useState("");
-
-  const handleChange = (event) => {
-    setText(event.target.value);
+  const handleInputMessage = (event) => {
+    setinputMessage(event.target.value);
   };
+
   return (
     <div className="relative">
       <div className="w-full flex">
@@ -81,7 +76,7 @@ export default function Contact({ theme }) {
                 label="Name"
                 id="fullWidth"
                 value={inputName}
-                onChange={handleInputName}
+                onChange={handleInputName} // Updated variable name
                 InputProps={{
                   endAdornment: (
                     <CgProfile style={{ marginRight: "8px" }} color="#F66C59" />
@@ -118,40 +113,19 @@ export default function Contact({ theme }) {
             </Box>
           </div>
           <div>
-            <TextareaAutosize
-              className="w-full bg-lightBg border custom-textarea h-16"
-              rows={1}
-              value={text}
-              onChange={handleChange}
-              placeholder="type your message here"
-            />
-            <BiSolidMessageDetail />
-
-            {/* <textarea name="" id="" cols="30" rows="10">
-              <BiSolidMessageDetail />
-            </textarea> */}
-            {/* <Box
-              sx={{
-                color: "#F66C59",
-                borderColor: "#F66C59",
-                maxWidth: "100%",
-              }}
-              className="flex"
-            >
-              <Textarea
-                placeholder="Type in here…"
-                minRows={2}
-                sx={{
-                  "&::before": {
-                    display: "none",
-                  },
-                  "&:focus-within": {
-                    outline: "2px solid var(--Textarea-focusedHighlight)",
-                    outlineOffset: "2px",
-                  },
-                }}
+            <div className="relative">
+              <BiSolidMessageDetail
+                color="#F66C59"
+                className="absolute right-5 top-5 "
               />
-            </Box> */}
+              <TextareaAutosize
+                className="w-full bg-lightBg border custom-textarea pl-10 h-16"
+                rows={1}
+                value={inputMessage}
+                onChange={handleInputMessage}
+                placeholder="Type your message here"
+              />
+            </div>
           </div>
           <button className="px-8 py-3 bg-mainOrange rounded-full text-lightBg">
             {t("main.fifthPart.button")}
