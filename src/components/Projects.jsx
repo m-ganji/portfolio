@@ -28,6 +28,7 @@ export default function Projects({ theme }) {
             clickable: true,
           }}
           modules={[Pagination]}
+          className="swiper-1"
         >
           <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-lg shadow-2xl mb-56">
             <div

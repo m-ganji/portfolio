@@ -91,7 +91,7 @@ export default function Contact({ theme }) {
           </div>
         </div>
         <div className="w-full sm:w-1/2 flex gap-5 flex-col mt-14 sm:mt-0">
-          <div className="border border-gray">
+          <div className="">
             <Box
               sx={{
                 color: "#F66C59",
@@ -115,7 +115,7 @@ export default function Contact({ theme }) {
             </Box>
           </div>
 
-          <div className="border border-gray">
+          <div className="">
             <Box
               sx={{
                 color: isEmailInvalid ? "red" : "#F66C59",
@@ -153,7 +153,7 @@ export default function Contact({ theme }) {
               )}
 
               <TextareaAutosize
-                className="w-full bg-lightBg border custom-textarea pl-10 h-16"
+                className="w-full bg-lightBg border-2 border-gray custom-textarea pl-10 h-16 rounded-[4px]"
                 rows={1}
                 value={inputMessage}
                 onChange={handleInputMessage}

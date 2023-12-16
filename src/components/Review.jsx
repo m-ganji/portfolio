@@ -4,9 +4,7 @@ import darkDot from "../assets//dots-dark.svg";
 import avatar from "../assets/avatar-1.png";
 import avatar2 from "../assets/avatar-2.png";
 import avatar3 from "../assets/avatar-3.png";
-import "swiper/css";
-import "swiper/css/pagination";
-import "../App.css";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Review({ theme }) {
@@ -41,8 +39,8 @@ export default function Review({ theme }) {
           1100: {
             slidesPerView: 3,
           },
-          // Add more breakpoints as needed
         }}
+        className="swiper-2"
       >
         <SwiperSlide className="bg-darkGray dark:bg-darkGrayMode border border-gray rounded-2xl ">
           <div className="flex p-8">

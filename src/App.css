@@ -95,7 +95,7 @@ span.swiper-pagination-bullet {
 }
 
 @media (max-width: 640px) {
-  .swiper-wrapper {
+  .swiper-2 .swiper-wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -103,18 +103,21 @@ span.swiper-pagination-bullet {
 }
 
 @media (max-width: 1100px) {
-  .swiper-wrapper {
+  .swiper-2 .swiper-wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
-  .swiper-slide.bg-darkGray.dark\:bg-darkGrayMode.border.border-gray.rounded-2xl.swiper-slide-active {
+  .swiper-2
+    .swiper-slide.bg-darkGray.dark\:bg-darkGrayMode.border.border-gray.rounded-2xl.swiper-slide-active {
     width: 100% !important;
   }
-  .swiper-slide.bg-darkGray.dark\:bg-darkGrayMode.border.border-gray.rounded-2xl.swiper-slide-next {
+  .swiper-2
+    .swiper-slide.bg-darkGray.dark\:bg-darkGrayMode.border.border-gray.rounded-2xl.swiper-slide-next {
     width: 100% !important;
   }
-  .swiper-slide.bg-darkGray.dark\:bg-darkGrayMode.border.border-gray.rounded-2xl {
+  .swiper-2
+    .swiper-slide.bg-darkGray.dark\:bg-darkGrayMode.border.border-gray.rounded-2xl {
     width: 100% !important;
   }
 }
