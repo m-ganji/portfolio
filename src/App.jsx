@@ -3,7 +3,7 @@ import Logo from "./assets/Logo.png";
 import Developer from "./assets/developer.png";
 import Shape from "./assets/shape.svg";
 import ShapeLight from "./assets/shape-light.svg";
-import { CiLight } from "react-icons/ci";
+import { PiSunDimLight } from "react-icons/pi";
 import ButtonCom from "./components/ButtonCom";
 import { PiTelegramLogoThin } from "react-icons/pi";
 import { LuDownload } from "react-icons/lu";
@@ -16,6 +16,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { LiaLanguageSolid } from "react-icons/lia";
 import { FaArrowTurnDown } from "react-icons/fa6";
+import { IoMdMenu } from "react-icons/io";
 import TabsCom from "./components/TabsCom";
 import useLanguage from "./components/useLanguage";
 import Services from "./components/Services";
@@ -25,6 +26,7 @@ import Projects from "./components/Projects";
 import Review from "./components/Review";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
+import MobileNav from "./components/mobileNav";
 
 function App() {
   // switching the theme
@@ -47,9 +49,7 @@ function App() {
 
   return (
     <div className="bg-lightBg dark:bg-black dark:text-lightBg w-full h-full font-sans z-10">
-      <header className="h-[10%] flex justify-between shadow-xl fixed bg-lightBg dark:bg-black w-full z-20">
-        <button onClick={() => handleChangeLanguage("en")}>en</button>
-        <button onClick={() => handleChangeLanguage("fa")}>fa</button>
+      <header className="h-[10%] hidden sm:flex justify-between shadow-xl fixed bg-lightBg dark:bg-black w-full z-20">
         <img src={Logo} alt="" className="h-20 ml-[10%]" />
         <div className="flex justify-start items-center gap-5 p-2 dark:text-lightBg mr-[10%]">
           <div className="hover:border-b hover:border-mainOrange hover:text-mainOrange">
@@ -71,29 +71,35 @@ function App() {
           >
             <LiaLanguageSolid />
           </button>
-          {/* {openModal && (
-            <button className="px-2 py-2 rounded bg-mainOrange">
-              Open Modal
-            </button>
-          )} */}
-          {/* <button
-            onClick={handlelanguageSwitch}
-            className="flex justify-center items-center flex-col"
-          >
-            <LiaLanguageSolid />
-
-            <button className="px-4 py-2 rounded bg-black ">Open Modal</button>
-          </button> */}
           <button onClick={handleThemeSwitch}>
-            <CiLight />
+            <PiSunDimLight />
           </button>
         </div>
       </header>
+      <header className="h-[10%] sm:hidden flex justify-between items-center fixed bg-lightBg dark:bg-black w-full z-20">
+        <img src={Logo} alt="" className="h-14 ml-[10%]" />
+        <div className="flex justify-center items-center gap-1 p-2 mr-[10%]">
+          <button
+            onClick={handleThemeSwitch}
+            className="flex justify-center items-center  dark:text-lightBg dark:bg-darkGrayMode rounded-full w-10 h-10 shadow-xl bg-transparent dark:shadow-darkWork"
+          >
+            <PiSunDimLight className="flex justify-center items-center w-6 h-6" />
+          </button>
+        </div>
+      </header>
+      <MobileNav />
       <main className="mx-[10%] flex flex-col">
         <div className="first_part flex">
-          <section className="mt-[12%] w-full dark:text-lightBg sm:w-1/2">
+          <section className="mt-[12%] w-full dark:text-lightBg sm:w-1/2 flex flex-col justify-center items-center">
+            <button
+              className="mt-10"
+              onClick={() => handleChangeLanguage("en")}
+            >
+              en
+            </button>
+            <button onClick={() => handleChangeLanguage("fa")}>fa</button>
             <h1 className="text-mainOrange">{t("main.firstPart.firstLine")}</h1>
-            <h4 className="text-6xl font-semibold mt-5">
+            <h4 className="text-6xl font-semibold mt-5 text-black">
               {t("main.firstPart.secondLine")}
             </h4>
             <p className="mt-5">{t("main.firstPart.thirdLine")}</p>

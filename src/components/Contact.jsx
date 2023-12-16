@@ -97,8 +97,11 @@ export default function Contact({ theme }) {
                 color: "#F66C59",
                 borderColor: "#F66C59",
                 maxWidth: "100%",
+                "@media (prefers-color-scheme: dark)": {
+                  color: "white",
+                },
               }}
-              className="flex"
+              className="flex dark:bg-darkGrayMode "
             >
               <TextField
                 fullWidth
@@ -122,7 +125,7 @@ export default function Contact({ theme }) {
                 borderColor: isEmailInvalid ? "red" : "#F66C59",
                 maxWidth: "100%",
               }}
-              className="flex"
+              className="flex dark:bg-darkGrayMode dark:text-lightBg dark:placeholder:text-lightBg"
             >
               <TextField
                 fullWidth
@@ -153,7 +156,7 @@ export default function Contact({ theme }) {
               )}
 
               <TextareaAutosize
-                className="w-full bg-lightBg border-2 border-gray custom-textarea pl-10 h-16 rounded-[4px]"
+                className="w-full bg-lightBg border-2 border-gray custom-textarea pl-10 h-16 rounded-[4px] dark:bg-darkGrayMode"
                 rows={1}
                 value={inputMessage}
                 onChange={handleInputMessage}

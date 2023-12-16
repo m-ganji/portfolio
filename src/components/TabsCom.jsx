@@ -79,19 +79,19 @@ export default function TabsCom() {
           {t("main.secondPart.paragraph")}
 
           <div className="grid grid-cols-2 gap-2">
-            <div className="p-4 text-white font-bold text-center flex flex-row justify-center items-center">
+            <div className="p-4  font-bold text-center flex flex-row justify-center items-center">
               <div className="w-full flex items-center gap-2">
                 <CgProfile color="#F66C59" className="mr-2" />
                 <span className="w-full flex justify-start">Mohamad Ganji</span>
               </div>
             </div>
-            <div className="p-4 text-white font-bold text-center flex flex-row">
+            <div className="p-4  font-bold text-center flex flex-row">
               <div className="flex items-center justify-around">
                 <BiPhoneCall color="#F66C59" className="mr-2" />
                 <span className="w-full">+989196273474</span>
               </div>
             </div>
-            <div className="p-4 text-white font-bold text-center">
+            <div className="p-4  font-bold text-center">
               <div className="w-full flex items-center gap-2">
                 <IoMail color="#F66C59" className="mr-2" />
 
@@ -101,7 +101,7 @@ export default function TabsCom() {
                 </span>
               </div>
             </div>
-            <div className="bg-green-500 p-4 text-white font-bold text-center flex flex-row">
+            <div className="bg-green-500 p-4  font-bold text-center flex flex-row">
               <div className="flex items-center justify-around">
                 <CiCalendar color="#F66C59" className="mr-2" />
                 <span className="w-full flex justify-start text-sm sm:text-base">

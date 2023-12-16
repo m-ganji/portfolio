@@ -13,6 +13,7 @@ export default {
       lightWork: "#FEF8F6",
       darkWork: "#27263A",
       review: "#EDE9E8",
+      white: "#FFFFFF",
     },
     extend: {
       fontFamily: {
