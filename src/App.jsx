@@ -91,7 +91,7 @@ function App() {
       </header>
       <main className="mx-[10%] flex flex-col">
         <div className="first_part flex">
-          <section className="mt-[7.5%] w-full dark:text-lightBg sm:w-1/2">
+          <section className="mt-[12%] w-full dark:text-lightBg sm:w-1/2">
             <h1 className="text-mainOrange">{t("main.firstPart.firstLine")}</h1>
             <h4 className="text-6xl font-semibold mt-5">
               {t("main.firstPart.secondLine")}
@@ -117,7 +117,7 @@ function App() {
               <FaWhatsapp />
             </div>
           </section>
-          <section className="hidden sm:flex w-1/2 mt-[7.5%] sm:justify-end">
+          <section className="hidden sm:flex w-1/2 mt-[12%] sm:justify-end">
             <div className="">
               <div>
                 <img
