@@ -1,10 +1,12 @@
+// css
 import "./App.css";
-import Logo from "./assets/Logo.png";
+// images
 import Developer from "./assets/developer.png";
 import Shape from "./assets/shape.svg";
 import ShapeLight from "./assets/shape-light.svg";
-import { PiSunDimLight } from "react-icons/pi";
-import ButtonCom from "./components/ButtonCom";
+import lightDot from "../src/assets/dots-light.svg";
+import darkDot from "../src/assets/dots-dark.svg";
+// icons
 import { PiTelegramLogoThin } from "react-icons/pi";
 import { LuDownload } from "react-icons/lu";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -12,92 +14,63 @@ import { FaTelegram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { useState } from "react";
-import { useEffect } from "react";
-import { LiaLanguageSolid } from "react-icons/lia";
 import { FaArrowTurnDown } from "react-icons/fa6";
-import { IoMdMenu } from "react-icons/io";
+// libraries
+
+import { Routes, Route, useLocation } from "react-router-dom";
+// components
+import ButtonCom from "./components/ButtonCom";
 import TabsCom from "./components/TabsCom";
-import useLanguage from "./components/useLanguage";
+import useLanguage from "./hooks/useLanguage";
 import Services from "./components/Services";
-import lightDot from "../src/assets/dots-light.svg";
-import darkDot from "../src/assets/dots-dark.svg";
 import Projects from "./components/Projects";
 import Review from "./components/Review";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
-import MobileNav from "./components/mobileNav";
+import useTheme from "./hooks/useTheme";
+import NoMatch from "./components/NoMatch";
+import Layout from "./components/Layout";
 
-function App() {
+export default function App() {
+  const { t, handleChangeLanguage } = useLanguage();
   // switching the theme
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [theme]);
+  const { theme, toggleTheme } = useTheme("light");
 
   const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    toggleTheme();
   };
 
+  return (
+    <div>
+      <Routes>
+        <Route index element={<Home state={{ theme: theme }} />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="*" element={<NoMatch />} />
+      </Routes>
+    </div>
+  );
+}
+
+function Home() {
+  // switching the theme
+  const location = useLocation();
+  const theme = location.state ? location.state.theme : "light";
+
+  const { toggleTheme } = useTheme(theme);
+  const handleThemeSwitch = () => {
+    toggleTheme();
+  };
   // switching the language
   const { t, handleChangeLanguage } = useLanguage();
 
   return (
     <div className="bg-lightBg dark:bg-black dark:text-lightBg w-full h-full font-sans z-10">
-      <header className="h-[10%] hidden sm:flex justify-between shadow-xl fixed bg-lightBg dark:bg-black w-full z-20">
-        <img src={Logo} alt="" className="h-20 ml-[10%]" />
-        <div className="flex justify-start items-center gap-5 p-2 dark:text-lightBg mr-[10%]">
-          <div className="hover:border-b hover:border-mainOrange hover:text-mainOrange">
-            {t("header.firstButton")}
-          </div>
+      <Layout />
 
-          <div className="hover:border-b hover:border-mainOrange hover:text-mainOrange">
-            {t("header.secondButton")}
-          </div>
-          <div className="hover:border-b hover:border-mainOrange hover:text-mainOrange">
-            {t("header.thirdButton")}
-          </div>
-          <button
-            // onClick={(e) => {
-            //   handlelanguageSwitch();
-            //   console.log(e);
-            // }}
-            className=""
-          >
-            <LiaLanguageSolid />
-          </button>
-          <button onClick={handleThemeSwitch}>
-            <PiSunDimLight />
-          </button>
-        </div>
-      </header>
-      <header className="h-[10%] sm:hidden flex justify-between items-center fixed bg-lightBg dark:bg-black w-full z-20">
-        <img src={Logo} alt="" className="h-14 ml-[10%]" />
-        <div className="flex justify-center items-center gap-1 p-2 mr-[10%]">
-          <button
-            onClick={handleThemeSwitch}
-            className="flex justify-center items-center  dark:text-lightBg dark:bg-darkGrayMode rounded-full w-10 h-10 shadow-xl bg-transparent dark:shadow-darkWork"
-          >
-            <PiSunDimLight className="flex justify-center items-center w-6 h-6" />
-          </button>
-        </div>
-      </header>
-      <MobileNav />
       <main className="mx-[10%] flex flex-col">
         <div className="first_part flex">
           <section className="mt-[12%] w-full dark:text-lightBg sm:w-1/2 flex flex-col justify-center items-center">
-            <button
-              className="mt-10"
-              onClick={() => handleChangeLanguage("en")}
-            >
-              en
-            </button>
-            <button onClick={() => handleChangeLanguage("fa")}>fa</button>
             <h1 className="text-mainOrange">{t("main.firstPart.firstLine")}</h1>
             <h4 className="text-6xl font-semibold mt-5 text-black">
               {t("main.firstPart.secondLine")}
@@ -165,6 +138,10 @@ function App() {
             </div>
           </div>
         </div>
+        <button className="mt-10" onClick={() => handleChangeLanguage("en")}>
+          en
+        </button>
+        <button onClick={() => handleChangeLanguage("fa")}>fa</button>
         <div className="third_part">
           <Services theme={theme} />
         </div>
@@ -174,15 +151,8 @@ function App() {
         <div className="fourth_part mt-40">
           <Review theme={theme} />
         </div>
-        <div className="fifth_part mt-40">
-          <Contact theme={theme} />
-        </div>
       </main>
-      <footer className="">
-        <Footer theme={theme} />
-      </footer>
+      <Footer theme={theme} />
     </div>
   );
 }
-
-export default App;

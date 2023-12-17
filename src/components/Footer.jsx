@@ -1,4 +1,4 @@
-import useLanguage from "./useLanguage";
+import useLanguage from "../hooks/useLanguage";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
@@ -9,7 +9,7 @@ export default function Footer({ theme }) {
   const { t, handleChangeLanguage } = useLanguage();
 
   return (
-    <div className="mt-24">
+    <div>
       <div className="w-full h-80 bg-darkGray dark:bg-darkGrayMode flex justify-center items-center flex-col ">
         <p className="font-bold text-4xl w-[450px] mb-7">
           {t("main.footer.title")}

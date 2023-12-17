@@ -1,6 +1,6 @@
 import lightDot from "../assets/dots-light.svg";
 import darkDot from "../assets//dots-dark.svg";
-import useLanguage from "./useLanguage";
+import useLanguage from "../hooks/useLanguage";
 import { SlDiamond } from "react-icons/sl";
 import { MdOutlineDeveloperMode } from "react-icons/md";
 import { PiNoteDuotone } from "react-icons/pi";

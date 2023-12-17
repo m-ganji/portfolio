@@ -1,4 +1,4 @@
-import useLanguage from "./useLanguage";
+import useLanguage from "../hooks/useLanguage";
 import contact from "../assets/Contact.svg";
 import { MdOutlineEmail } from "react-icons/md";
 import { HiOutlineHome } from "react-icons/hi2";
@@ -10,6 +10,8 @@ import { CgProfile } from "react-icons/cg";
 import { BiSolidMessageDetail } from "react-icons/bi";
 import { TextareaAutosize } from "@mui/base";
 import Swal from "sweetalert2";
+import Layout from "./Layout";
+import Footer from "./Footer";
 
 export default function Contact({ theme }) {
   const { t, handleChangeLanguage } = useLanguage();
@@ -56,7 +58,8 @@ export default function Contact({ theme }) {
     setIsEmailInvalid(!isValidEmail);
   };
   return (
-    <div className="relative">
+    <div className="relative  dark:bg-black">
+      <Layout />
       <div className="w-full flex flex-col sm:flex-row">
         <div className="w-full sm:w-1/2">
           <div className="flex flex-col items-center sm:items-start">
@@ -182,6 +185,7 @@ export default function Contact({ theme }) {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

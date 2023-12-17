@@ -230,7 +230,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: #fff9f7;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -269,4 +269,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .bm-burger-button {
     display: none;
   }
+}
+
+.bm-menu-wrap.bg-hamburger {
+  height: 100vh;
 }

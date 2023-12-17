@@ -4,7 +4,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useState } from "react";
-import useLanguage from "./useLanguage";
+import useLanguage from "../hooks/useLanguage";
 import { CgProfile } from "react-icons/cg";
 import { BiPhoneCall } from "react-icons/bi";
 import { IoMail } from "react-icons/io5";
