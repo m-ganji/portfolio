@@ -22,7 +22,7 @@ export default function Layout() {
 
   const [showLanguageSwitcher, setShowLanguageSwitcher] = useState(false);
 
-  const toggleLanguageSwitcher = (e) => {
+  const toggleLanguageSwitcher = () => {
     setShowLanguageSwitcher((prev) => !prev);
   };
 
@@ -40,7 +40,7 @@ export default function Layout() {
     <>
       <header className="h-[10%] hidden sm:flex justify-between shadow-xl fixed bg-lightBg dark:bg-black w-full z-20">
         <Link to="/" className=" ml-[10%]">
-          <img src={Logo} alt="" className="h-20" />
+          <img src={Logo} alt="" className="h-20 fade-enter" />
         </Link>
         <div className="flex justify-start items-center gap-5 p-2 dark:text-lightBg mr-[10%]">
           <Link to="/" className="">
@@ -58,7 +58,6 @@ export default function Layout() {
               {t("header.thirdButton")}
             </div>
           </Link>
-
           <button onClick={toggleLanguageSwitcher}>
             <LiaLanguageSolid />
           </button>

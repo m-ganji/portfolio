@@ -64,10 +64,23 @@ export default function TabsCom() {
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
+            className="border border-gray rounded-3xl"
           >
-            <Tab label={t("main.secondPart.firstButton")} {...a11yProps(0)} />
-            <Tab label={t("main.secondPart.secondButton")} {...a11yProps(1)} />
-            <Tab label={t("main.secondPart.thirdButton")} {...a11yProps(2)} />
+            <Tab
+              className="dark:text-lightBg"
+              label={t("main.secondPart.firstButton")}
+              {...a11yProps(0)}
+            />
+            <Tab
+              className="dark:text-lightBg"
+              label={t("main.secondPart.secondButton")}
+              {...a11yProps(1)}
+            />
+            <Tab
+              className="dark:text-lightBg"
+              label={t("main.secondPart.thirdButton")}
+              {...a11yProps(2)}
+            />
           </Tabs>
         </Box>
         <CustomTabPanel

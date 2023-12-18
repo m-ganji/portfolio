@@ -16,7 +16,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaArrowTurnDown } from "react-icons/fa6";
 // libraries
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Link } from "react-router-dom";
 
 // components
 import ButtonCom from "./components/ButtonCom";
@@ -71,7 +71,7 @@ function Home() {
         <div className="first_part flex">
           <section className="mt-[12%] w-full dark:text-lightBg sm:w-1/2 flex flex-col justify-center items-center">
             <h1 className="text-mainOrange">{t("main.firstPart.firstLine")}</h1>
-            <h4 className="text-6xl font-semibold mt-5 text-black">
+            <h4 className="text-6xl font-semibold mt-5 text-black dark:text-lightBg">
               {t("main.firstPart.secondLine")}
             </h4>
             <p className="mt-5">{t("main.firstPart.thirdLine")}</p>
@@ -137,10 +137,6 @@ function Home() {
             </div>
           </div>
         </div>
-        <button className="mt-10" onClick={() => handleChangeLanguage("en")}>
-          en
-        </button>
-        <button onClick={() => handleChangeLanguage("fa")}>fa</button>
         <div className="third_part">
           <Services theme={theme} />
         </div>
@@ -155,9 +151,11 @@ function Home() {
         <p className="font-bold text-4xl w-[450px] mb-7">
           {t("main.footer.title")}
         </p>
-        <button className="px-8 py-3 bg-mainOrange rounded-full">
-          {t("main.footer.button")}
-        </button>
+        <Link to="/contact" className="">
+          <button className="px-8 py-3 bg-mainOrange rounded-full">
+            {t("main.footer.button")}
+          </button>
+        </Link>
       </div>
       <Footer theme={theme} />
     </div>

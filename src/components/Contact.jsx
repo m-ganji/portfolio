@@ -58,7 +58,7 @@ export default function Contact({ theme }) {
     setIsEmailInvalid(!isValidEmail);
   };
   return (
-    <div className="relative  dark:bg-black">
+    <div className="relative  dark:bg-black dark:text-lightBg">
       <Layout />
       <div className="w-full flex flex-col sm:flex-row ">
         <div className="w-full sm:w-1/2 mt-[25%] sm:mt-[12%] ml-[0%] sm:ml-[10%]">
