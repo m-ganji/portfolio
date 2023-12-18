@@ -60,10 +60,10 @@ export default function Contact({ theme }) {
   return (
     <div className="relative  dark:bg-black">
       <Layout />
-      <div className="w-full flex flex-col sm:flex-row">
-        <div className="w-full sm:w-1/2">
-          <div className="flex flex-col items-center sm:items-start">
-            <div className="flex items-center gap-5">
+      <div className="w-full flex flex-col sm:flex-row ">
+        <div className="w-full sm:w-1/2 mt-[25%] sm:mt-[12%] ml-[0%] sm:ml-[10%]">
+          <div className="flex flex-col items-center sm:items-start ">
+            <div className="flex items-center gap-5 ">
               <div className="w-6 bg-mainOrange h-1 flex items-start "></div>
               <span>{t("main.fifthPart.title")}</span>
             </div>
@@ -74,12 +74,12 @@ export default function Contact({ theme }) {
             <p className="w-40 mt-5">{t("main.fifthPart.workSpan")}</p>
           </div>
         </div>
-        <div className="w-full sm:w-1/2 flex justify-center items-start">
-          <img src={contact} alt="" className="w-[500px] h-[400px]" />
+        <div className="w-full sm:w-1/2 flex justify-center items-start mt-[25%] sm:mt-[12%] mr-[0%] sm:mr-[10%]">
+          <img src={contact} alt="" className="w-[400px] h-[400px]" />
         </div>
       </div>
-      <div className="w-full flex flex-col sm:flex-row">
-        <div className="w-full sm:w-1/2">
+      <div className="w-full flex flex-col sm:flex-row mt-[5%]">
+        <div className="w-full sm:w-1/2 ml-[0%] sm:ml-[10%] ">
           <div className="flex items-center gap-5 justify-center sm:justify-start">
             <MdOutlineEmail color="#F66C59" />
             <p>Mohamad.ganjif@gmail.com</p>
@@ -93,19 +93,9 @@ export default function Contact({ theme }) {
             <p>+989196273474</p>
           </div>
         </div>
-        <div className="w-full sm:w-1/2 flex gap-5 flex-col mt-14 sm:mt-0">
-          <div className="">
-            <Box
-              sx={{
-                color: "#F66C59",
-                borderColor: "#F66C59",
-                maxWidth: "100%",
-                "@media (prefers-color-scheme: dark)": {
-                  color: "white",
-                },
-              }}
-              className="flex dark:bg-darkGrayMode "
-            >
+        <div className="w-full sm:w-1/2 flex gap-5 flex-col mt-[5%] sm:mt-[0%]">
+          <div className="ml-[10%] sm:ml-[0%]">
+            <Box className="flex dark:bg-darkGrayMode ">
               <TextField
                 fullWidth
                 label="Name"
@@ -121,15 +111,8 @@ export default function Contact({ theme }) {
             </Box>
           </div>
 
-          <div className="">
-            <Box
-              sx={{
-                color: isEmailInvalid ? "red" : "#F66C59",
-                borderColor: isEmailInvalid ? "red" : "#F66C59",
-                maxWidth: "100%",
-              }}
-              className="flex dark:bg-darkGrayMode dark:text-lightBg dark:placeholder:text-lightBg"
-            >
+          <div className=" ml-[10%] sm:ml-[0%]">
+            <Box className="flex dark:bg-darkGrayMode dark:text-lightBg dark:placeholder:text-lightBg">
               <TextField
                 fullWidth
                 label="Email"
@@ -150,7 +133,7 @@ export default function Contact({ theme }) {
             </Box>
           </div>
           <div>
-            <div className="relative">
+            <div className="relative  ml-[10%] sm:ml-[0%]">
               {isInputMessageTyped && (
                 <BiSolidMessageDetail
                   color="#F66C59"
@@ -169,7 +152,7 @@ export default function Contact({ theme }) {
           </div>
           {!isEmailInvalid ? (
             <button
-              className="px-8 py-3 bg-mainOrange rounded-full text-lightBg"
+              className="px-8 py-3 bg-mainOrange rounded-full text-lightBg mr-[10%] ml-[10%] sm:ml-[0%] mb-[10%]"
               onClick={handleSave}
             >
               {t("main.fifthPart.button")}

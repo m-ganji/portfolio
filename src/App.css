@@ -274,3 +274,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-menu-wrap.bg-hamburger {
   height: 100vh;
 }
+
+.w-full.sm\:w-1\/2.flex.gap-5.flex-col.mt-\[5\%\].sm\:mt-\[0\%\] {
+  margin-right: 10%;
+}
+
+@media (max-width: 639px) {
+  .ml-\[10\%\].sm\:ml-\[0\%\] {
+    margin-right: 10% !important;
+  }
+  .w-full.sm\:w-1\/2.flex.justify-center.items-start.mt-\[25\%\].sm\:mt-\[12\%\].mr-\[0\%\].sm\:mr-\[10\%\] {
+    margin-top: 0%;
+  }
+}
