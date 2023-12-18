@@ -1,6 +1,6 @@
 {
   "header": {
-    "firstButton": "home",
+    "firstButton": "Home",
     "secondButton": "My Projects",
     "thirdButton": "Contact"
   },
@@ -55,6 +55,8 @@
       "button": "Contact me",
       "buttonFilled": "Great! All information has been successfully filled.",
       "errorEmail": "Invalid email format."
-    }
+    },
+    "found": "Not Found.",
+    "return": "return to homepage."
   }
 }

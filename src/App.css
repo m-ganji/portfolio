@@ -287,3 +287,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     margin-top: 0%;
   }
 }
+
+html {
+  overflow-x: hidden;
+}

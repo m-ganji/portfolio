@@ -8,6 +8,7 @@ const useLanguage = () => {
 
   const handleChangeLanguage = (lang) => {
     i18n.changeLanguage(lang);
+    console.log(lang);
   };
 
   const handleLanguageSwitch = () => {

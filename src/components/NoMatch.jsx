@@ -1,8 +1,19 @@
+import { Link } from "react-router-dom";
+import useLanguage from "../hooks/useLanguage";
+import Layout from "./Layout";
+
 export default function NoMatch() {
+  const { t, handleChangeLanguage } = useLanguage();
+
   return (
-    <div className="p-96">
-      NoMatcadsad sadd sa sad aaaaaasda sads daaaawqs adQGfad QW Asdddddddddd W
-      Eh
+    <div>
+      <Layout />
+      <div className="hover:border-b hover:border-mainOrange hover:text-mainOrange pt-[10%] flex justify-center">
+        {t("main.found")}
+      </div>
+      <Link to="/" className="">
+        {t("main.return")}
+      </Link>
     </div>
   );
 }

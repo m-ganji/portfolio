@@ -16,8 +16,8 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaArrowTurnDown } from "react-icons/fa6";
 // libraries
-
 import { Routes, Route, useLocation } from "react-router-dom";
+
 // components
 import ButtonCom from "./components/ButtonCom";
 import TabsCom from "./components/TabsCom";
@@ -30,12 +30,12 @@ import Contact from "./components/Contact";
 import useTheme from "./hooks/useTheme";
 import NoMatch from "./components/NoMatch";
 import Layout from "./components/Layout";
+import ProjectsLayout from "./components/ProjectsLayout";
 
 export default function App() {
   const { t, handleChangeLanguage } = useLanguage();
   // switching the theme
   const { theme, toggleTheme } = useTheme("light");
-
   const handleThemeSwitch = () => {
     toggleTheme();
   };
@@ -44,7 +44,7 @@ export default function App() {
     <div>
       <Routes>
         <Route index element={<Home state={{ theme: theme }} />} />
-        <Route path="projects" element={<Projects />} />
+        <Route path="projects" element={<ProjectsLayout theme={theme} />} />
         <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
@@ -63,7 +63,6 @@ function Home() {
   };
   // switching the language
   const { t, handleChangeLanguage } = useLanguage();
-
   return (
     <div className="bg-lightBg dark:bg-black dark:text-lightBg w-full h-full font-sans z-10">
       <Layout />
@@ -152,6 +151,14 @@ function Home() {
           <Review theme={theme} />
         </div>
       </main>
+      <div className="w-full h-80 bg-darkGray dark:bg-darkGrayMode flex justify-center items-center flex-col mt-[10%]">
+        <p className="font-bold text-4xl w-[450px] mb-7">
+          {t("main.footer.title")}
+        </p>
+        <button className="px-8 py-3 bg-mainOrange rounded-full">
+          {t("main.footer.button")}
+        </button>
+      </div>
       <Footer theme={theme} />
     </div>
   );
