@@ -91,34 +91,39 @@ export default function TabsCom() {
         >
           {t("main.secondPart.paragraph")}
 
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mx-auto">
             <div className="p-4  font-bold text-center flex flex-row justify-center items-center">
               <div className="w-full flex items-center gap-2">
                 <CgProfile color="#F66C59" className="mr-2" />
-                <span className="w-full flex justify-start">Mohamad Ganji</span>
+                <span className="w-full flex justify-center">
+                  Mohamad Ganji
+                </span>
               </div>
             </div>
-            <div className="p-4  font-bold text-center flex flex-row">
-              <div className="flex items-center justify-around">
+            <div className="p-4  font-bold text-center flex flex-row justify-center items-center">
+              <div className="w-full flex items-center gap-2">
                 <BiPhoneCall color="#F66C59" className="mr-2" />
-                <span className="w-full">+989196273474</span>
+                <span className="w-full flex justify-center">
+                  +989196273474
+                </span>
               </div>
             </div>
             <div className="p-4  font-bold text-center">
               <div className="w-full flex items-center gap-2">
                 <IoMail color="#F66C59" className="mr-2" />
 
-                <span className="w-full flex justify-start">
+                <span className="w-full flex flex justify-center">
                   {" "}
                   {t("main.secondPart.calender")}
                 </span>
               </div>
             </div>
-            <div className="bg-green-500 p-4  font-bold text-center flex flex-row">
-              <div className="flex items-center justify-around">
+            <div className="p-4  font-bold text-center flex flex-row justify-center items-center">
+              <div className="w-full flex items-center gap-2">
                 <CiCalendar color="#F66C59" className="mr-2" />
-                <span className="w-full flex justify-start text-sm sm:text-base">
-                  Mohamad.ganjif@gmail.com
+                <span className="w-full flex justify-center">
+                  Mohamad.ganjif <br />
+                  @gmail.com
                 </span>
               </div>
             </div>
@@ -127,7 +132,7 @@ export default function TabsCom() {
             {t("main.secondPart.skills")}
           </span>
           <div className="border-t-2 border-gray w-11/12 mt-3 mb-3"></div>
-          <span className="">{t("main.secondPart.language")}</span>
+          <span>{t("main.secondPart.language")}</span>
         </CustomTabPanel>
         <CustomTabPanel
           value={value}

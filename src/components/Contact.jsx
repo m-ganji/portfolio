@@ -12,6 +12,7 @@ import { TextareaAutosize } from "@mui/base";
 import Swal from "sweetalert2";
 import Layout from "./Layout";
 import Footer from "./Footer";
+import { motion as m } from "framer-motion";
 
 export default function Contact({ theme }) {
   const { t, handleChangeLanguage } = useLanguage();
@@ -58,7 +59,13 @@ export default function Contact({ theme }) {
     setIsEmailInvalid(!isValidEmail);
   };
   return (
-    <div className="relative  dark:bg-black dark:text-lightBg">
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 1 }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+      className="relative  dark:bg-black dark:text-lightBg"
+    >
       <Layout />
       <div className="w-full flex flex-col sm:flex-row ">
         <div className="w-full sm:w-1/2 mt-[25%] sm:mt-[12%] ml-[0%] sm:ml-[10%]">
@@ -169,6 +176,6 @@ export default function Contact({ theme }) {
         </div>
       </div>
       <Footer />
-    </div>
+    </m.div>
   );
 }

@@ -17,6 +17,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaArrowTurnDown } from "react-icons/fa6";
 // libraries
 import { Routes, Route, useLocation, Link } from "react-router-dom";
+import { motion as m } from "framer-motion";
 
 // components
 import ButtonCom from "./components/ButtonCom";
@@ -31,6 +32,7 @@ import useTheme from "./hooks/useTheme";
 import NoMatch from "./components/NoMatch";
 import Layout from "./components/Layout";
 import ProjectsLayout from "./components/ProjectsLayout";
+import { useRef, useState } from "react";
 
 export default function App() {
   const { t, handleChangeLanguage } = useLanguage();
@@ -63,24 +65,44 @@ function Home() {
   };
   // switching the language
   const { t, handleChangeLanguage } = useLanguage();
-  return (
-    <div className="bg-lightBg dark:bg-black dark:text-lightBg w-full h-full font-sans z-10">
-      <Layout />
 
+  // click animation
+  const scrollToBottom = () => {
+    if (tabsRef.current) {
+      tabsRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "end", // or "start" depending on your preference
+      });
+    }
+  };
+
+  const tabsRef = useRef(null);
+
+  return (
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 1 }}
+      transition={{ duration: 0.75, ease: "easeOut" }}
+      className="bg-lightBg dark:bg-black dark:text-lightBg w-full h-full font-sans z-10"
+    >
+      <Layout />
       <main className="mx-[10%] flex flex-col">
         <div className="first_part flex">
           <section className="mt-[12%] w-full dark:text-lightBg sm:w-1/2 flex flex-col justify-center items-center">
             <h1 className="text-mainOrange">{t("main.firstPart.firstLine")}</h1>
-            <h4 className="text-6xl font-semibold mt-5 text-black dark:text-lightBg">
+            <h4 className="text-6xl font-semibold mt-5 text-black dark:text-lightBg flex justify-center items-center">
               {t("main.firstPart.secondLine")}
             </h4>
             <p className="mt-5">{t("main.firstPart.thirdLine")}</p>
-            <div className="flex gap-14">
-              <ButtonCom
-                title={t("main.firstPart.secondButton")}
-                className="bg-mainOrange text-lightBg mt-5 flex justify-center items-center gap-1"
-                icon={<PiTelegramLogoThin />}
-              />
+            <div className="flex gap-8 sm:gap-14">
+              <Link to="/contact" className="">
+                <ButtonCom
+                  title={t("main.firstPart.secondButton")}
+                  className="bg-mainOrange text-lightBg mt-5 flex justify-center items-center gap-1"
+                  icon={<PiTelegramLogoThin />}
+                />
+              </Link>
               <ButtonCom
                 title={t("main.firstPart.firstButton")}
                 className="bg-black dark:bg-lightBg dark:text-black text-lightBg mt-5 flex justify-center items-center gap-1"
@@ -125,19 +147,23 @@ function Home() {
           </section>
         </div>
         <div className="second_part flex justify-between items-center mt-28 flex-col">
-          <FaArrowTurnDown color="#F66C59" className="mb-28" />
+          <FaArrowTurnDown
+            color="#F66C59"
+            className="mb-28 cursor-pointer"
+            onClick={scrollToBottom}
+          />
           <div className="flex justify-center items-center dark:text-lightBg mb-16 font-bold">
             {theme === "light" ? <img src={lightDot} /> : <img src={darkDot} />}
             <p className="text-2xl font-bold">{t("main.secondPart.header")}</p>
           </div>
           <div className="flex w-full">
             <div className="w-1/2 hidden sm:flex">test</div>
-            <div className="w-full dark:text-lightBg sm:w-1/2">
+            <div className="w-full dark:text-lightBg sm:w-1/2" ref={tabsRef}>
               <TabsCom />
             </div>
           </div>
         </div>
-        <div className="third_part">
+        <div className="third_part mt-[25%] sm:mt-[0%]">
           <Services theme={theme} />
         </div>
         <div className="fourth_part mt-14">
@@ -148,16 +174,19 @@ function Home() {
         </div>
       </main>
       <div className="w-full h-80 bg-darkGray dark:bg-darkGrayMode flex justify-center items-center flex-col mt-[10%]">
-        <p className="font-bold text-4xl w-[450px] mb-7">
+        <p className="font-bold text-2xl sm:text-4xl w-2/3 sm:w-[450px] mb-7 ">
           {t("main.footer.title")}
         </p>
-        <Link to="/contact" className="">
-          <button className="px-8 py-3 bg-mainOrange rounded-full">
+        <Link
+          to="/contact"
+          className="w-1/2 sm:w-full flex justify-center items-center"
+        >
+          <button className="px-6 py-3 bg-mainOrange rounded-full ">
             {t("main.footer.button")}
           </button>
         </Link>
       </div>
       <Footer theme={theme} />
-    </div>
+    </m.div>
   );
 }

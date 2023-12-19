@@ -6,7 +6,7 @@ import useLanguage from "../hooks/useLanguage";
 import { PiSunDimLight } from "react-icons/pi";
 import { LiaLanguageSolid } from "react-icons/lia";
 import useTheme from "../hooks/useTheme";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 export default function Layout() {
@@ -36,6 +36,27 @@ export default function Layout() {
     setShowLanguageSwitcher(false);
   };
 
+  const location = useLocation();
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
+
+  const linkStyle = {
+    borderBottom: isActive("/") ? "2px solid #F66C59" : "none",
+    color: isActive("/") ? "#F66C59" : "inherit",
+  };
+
+  const linkStyleProjects = {
+    borderBottom: isActive("/projects") ? "2px solid #F66C59" : "none",
+    color: isActive("/projects") ? "#F66C59" : "inherit",
+  };
+
+  const linkStyleContact = {
+    borderBottom: isActive("/contact") ? "2px solid #F66C59" : "none",
+    color: isActive("/contact") ? "#F66C59" : "inherit",
+  };
+
   return (
     <>
       <header className="h-[10%] hidden sm:flex justify-between shadow-xl fixed bg-lightBg dark:bg-black w-full z-20">
@@ -43,18 +64,18 @@ export default function Layout() {
           <img src={Logo} alt="" className="h-20 fade-enter" />
         </Link>
         <div className="flex justify-start items-center gap-5 p-2 dark:text-lightBg mr-[10%]">
-          <Link to="/" className="">
-            <div className="hover:border-b hover:border-mainOrange hover:text-mainOrange">
+          <Link to="/" className="" style={linkStyle}>
+            <div className="hover:text-mainOrange">
               {t("header.firstButton")}
             </div>
           </Link>
-          <Link to="/projects" className="">
-            <div className="hover:border-b hover:border-mainOrange hover:text-mainOrange">
+          <Link to="/projects" className="" style={linkStyleProjects}>
+            <div className="hover:text-mainOrange">
               {t("header.secondButton")}
             </div>
           </Link>
-          <Link to="/contact" className="">
-            <div className="hover:border-b hover:border-mainOrange hover:text-mainOrange">
+          <Link to="/contact" className="" style={linkStyleContact}>
+            <div className="hover:text-mainOrange">
               {t("header.thirdButton")}
             </div>
           </Link>
@@ -95,8 +116,10 @@ export default function Layout() {
         </div>
       </header>
       <header className="h-[10%] sm:hidden flex justify-between items-center fixed bg-lightBg dark:bg-black w-full z-20">
-        <img src={Logo} alt="" className="h-14 ml-[10%]" />
-        <div className="flex justify-center items-center gap-1 p-2 mr-[10%]">
+        <Link to="/" className=" ml-[10%]">
+          <img src={Logo} alt="" className="h-14 ml-[10%]" />
+        </Link>
+        <div className="flex justify-center items-center gap-1 p-2 mr-[20%] sm:mr-[15%] mt-[5%]">
           <button
             onClick={handleThemeSwitch}
             className="flex justify-center items-center  dark:text-lightBg dark:bg-darkGrayMode rounded-full w-10 h-10 shadow-xl bg-transparent dark:shadow-darkWork"
