@@ -5,20 +5,13 @@ import GB from "../assets/England.png";
 import useLanguage from "../hooks/useLanguage";
 import { PiSunDimLight } from "react-icons/pi";
 import { LiaLanguageSolid } from "react-icons/lia";
-import useTheme from "../hooks/useTheme";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+import { useTheme } from "../context/ThemeUtils";
 
 export default function Layout() {
   // switching the language
   const { t, handleChangeLanguage } = useLanguage();
-
-  // switching the theme
-  const { theme, toggleTheme } = useTheme("light");
-
-  const handleThemeSwitch = () => {
-    toggleTheme();
-  };
 
   const [showLanguageSwitcher, setShowLanguageSwitcher] = useState(false);
 
@@ -57,6 +50,11 @@ export default function Layout() {
     color: isActive("/contact") ? "#F66C59" : "inherit",
   };
 
+  // toggling theme
+  const { theme, toggleTheme } = useTheme();
+  const handleButtonClick = () => {
+    toggleTheme();
+  };
   return (
     <>
       <header className="h-[10%] hidden sm:flex justify-between shadow-xl fixed bg-lightBg dark:bg-black w-full z-20">
@@ -109,8 +107,7 @@ export default function Layout() {
               </button>
             </div>
           )}
-
-          <button onClick={handleThemeSwitch}>
+          <button onClick={handleButtonClick}>
             <PiSunDimLight />
           </button>
         </div>
@@ -120,15 +117,15 @@ export default function Layout() {
           <img src={Logo} alt="" className="h-14 ml-[10%]" />
         </Link>
         <div className="flex justify-center items-center gap-1 p-2 mr-[20%] sm:mr-[15%] mt-[5%]">
-          <button
-            onClick={handleThemeSwitch}
-            className="flex justify-center items-center  dark:text-lightBg dark:bg-darkGrayMode rounded-full w-10 h-10 shadow-xl bg-transparent dark:shadow-darkWork"
-          >
-            <PiSunDimLight className="flex justify-center items-center w-6 h-6" />
+          <button className="flex justify-center items-center  dark:text-lightBg dark:bg-darkGrayMode rounded-full w-10 h-10 shadow-xl bg-transparent dark:shadow-darkWork">
+            <PiSunDimLight
+              onClick={handleButtonClick}
+              className="flex justify-center items-center w-6 h-6"
+            />
           </button>
         </div>
       </header>
-      <MobileNav theme={theme} />
+      <MobileNav />
     </>
   );
 }

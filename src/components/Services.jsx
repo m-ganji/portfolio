@@ -4,9 +4,12 @@ import useLanguage from "../hooks/useLanguage";
 import { SlDiamond } from "react-icons/sl";
 import { MdOutlineDeveloperMode } from "react-icons/md";
 import { PiNoteDuotone } from "react-icons/pi";
+import { useTheme } from "../context/ThemeUtils";
 
-export default function Services({ theme }) {
+export default function Services() {
   const { t, handleChangeLanguage } = useLanguage();
+  const { theme } = useTheme();
+
   return (
     <div className="relative">
       <div className="flex justify-center items-center">

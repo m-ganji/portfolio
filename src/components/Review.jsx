@@ -6,18 +6,13 @@ import avatar2 from "../assets/avatar-2.png";
 import avatar3 from "../assets/avatar-3.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useTheme } from "../context/ThemeUtils";
 
-export default function Review({ theme }) {
+export default function Review() {
   const { t, handleChangeLanguage } = useLanguage();
 
-  //   <div className="flex justify-center items-center">
-  //         {theme === "light" ? (
-  //           <img src={lightDot} alt="Light Dot" />
-  //         ) : (
-  //           <img src={darkDot} alt="Dark Dot" />
-  //         )}
-  //         <p className="text-2xl font-bold"> {t("main.thirdPart.header")}</p>
-  //       </div>
+  const { theme } = useTheme();
+
   return (
     <div className="w-full flex justify-center items-center flex-col">
       <div className="flex items-baseline mb-5">

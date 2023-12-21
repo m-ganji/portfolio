@@ -5,14 +5,12 @@ import "../App.css";
 import Projects from "./Projects";
 import Layout from "./Layout";
 import Footer from "./Footer";
-import useTheme from "../hooks/useTheme";
 import { motion as m } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export default function ProjectsLayout() {
   const { t, handleChangeLanguage } = useLanguage();
 
-  const { theme, toggleTheme } = useTheme("light");
   return (
     <m.div
       initial={{ opacity: 0 }}
@@ -23,7 +21,7 @@ export default function ProjectsLayout() {
     >
       <Layout />
       <div className="p-[10%] mb-[-5%] pt-[25%] sm:pt-[10%] relative bg-lightBg dark:bg-black">
-        <Projects theme={theme} className="absolute" />
+        <Projects className="absolute" />
       </div>
       <div className="w-full h-80 bg-darkGray dark:bg-darkGrayMode flex justify-center items-center flex-col mt-[5%] sm:mt-[5%]">
         <p className="font-bold text-2xl sm:text-4xl w-2/3 sm:w-[450px] mb-7 text-center">

@@ -8,16 +8,16 @@ import "swiper/css/pagination";
 import "../App.css";
 import { Pagination } from "swiper/modules";
 
-export default function Projects({ theme }) {
+export default function Projects() {
   const { t, handleChangeLanguage } = useLanguage();
   return (
     <div className="flex flex-col sm:flex-row">
       <div className="w-full flex justify-center items-center sm:w-1/4 sm:justify-start">
-        {theme === "light" ? (
+        {/* {theme === "light" ? (
           <img src={lightDot} alt="Light Dot" width={22} height={22} />
         ) : (
           <img src={darkDot} alt="Dark Dot" />
-        )}
+        )} */}
         <p className="text-2xl font-bold ml-3"> {t("main.fourthPart.title")}</p>
       </div>
       <div className="w-full sm:w-3/4">

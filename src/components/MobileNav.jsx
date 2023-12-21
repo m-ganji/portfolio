@@ -8,7 +8,6 @@ import {
   FaGithub,
   FaInstagram,
 } from "react-icons/fa";
-import useTheme from "../hooks/useTheme";
 
 const MobileNav = ({ theme }) => {
   const menuStyles = {

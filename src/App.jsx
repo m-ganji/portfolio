@@ -16,7 +16,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaArrowTurnDown } from "react-icons/fa6";
 // libraries
-import { Routes, Route, useLocation, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
 
 // components
@@ -28,41 +28,29 @@ import Projects from "./components/Projects";
 import Review from "./components/Review";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
-import useTheme from "./hooks/useTheme";
 import NoMatch from "./components/NoMatch";
 import Layout from "./components/Layout";
 import ProjectsLayout from "./components/ProjectsLayout";
-import { useRef, useState } from "react";
+import { useRef } from "react";
+import { ThemeProvider } from "./context/ThemeContext";
+import { useTheme } from "./context/ThemeUtils";
 
 export default function App() {
-  const { t, handleChangeLanguage } = useLanguage();
-  // switching the theme
-  const { theme, toggleTheme } = useTheme("light");
-  const handleThemeSwitch = () => {
-    toggleTheme();
-  };
-
   return (
     <div>
-      <Routes>
-        <Route index element={<Home state={{ theme: theme }} />} />
-        <Route path="projects" element={<ProjectsLayout theme={theme} />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="*" element={<NoMatch />} />
-      </Routes>
+      <ThemeProvider>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="projects" element={<ProjectsLayout />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoMatch />} />
+        </Routes>
+      </ThemeProvider>
     </div>
   );
 }
 
 function Home() {
-  // switching the theme
-  const location = useLocation();
-  const theme = location.state ? location.state.theme : "light";
-
-  const { toggleTheme } = useTheme(theme);
-  const handleThemeSwitch = () => {
-    toggleTheme();
-  };
   // switching the language
   const { t, handleChangeLanguage } = useLanguage();
 
@@ -71,12 +59,14 @@ function Home() {
     if (tabsRef.current) {
       tabsRef.current.scrollIntoView({
         behavior: "smooth",
-        block: "end", // or "start" depending on your preference
+        block: "end",
       });
     }
   };
 
   const tabsRef = useRef(null);
+
+  const { theme } = useTheme();
 
   return (
     <m.div
@@ -164,13 +154,13 @@ function Home() {
           </div>
         </div>
         <div className="third_part mt-[25%] sm:mt-[0%]">
-          <Services theme={theme} />
+          <Services />
         </div>
         <div className="fourth_part mt-14">
-          <Projects theme={theme} />
+          <Projects />
         </div>
         <div className="fourth_part mt-40">
-          <Review theme={theme} />
+          <Review />
         </div>
       </main>
       <div className="w-full h-80 bg-darkGray dark:bg-darkGrayMode flex justify-center items-center flex-col mt-[10%]">
@@ -186,7 +176,7 @@ function Home() {
           </button>
         </Link>
       </div>
-      <Footer theme={theme} />
+      <Footer />
     </m.div>
   );
 }
