@@ -40,15 +40,27 @@
       "header": "My Services"
     },
     "fourthPart": {
-      "title": "Latest Projects"
+      "title": "Latest Projects",
+      "button": "View Website"
     },
     "fifthPart": {
       "title": "Hello 👋",
       "work": "Let's Work",
       "together": "Together!",
-      "tehran": "Tehran,Tehranpars",
+      "tehran": "Iran,Tehran",
       "workSpan": "Unlocking possibilities and creating together.",
-      "button": "Lets Talk"
+      "button": "Let's Talk"
+    },
+    "sixPart": {
+      "firstName": "Alireza Soleymanzadeh",
+      "firstJob": "CEO at Sedreh",
+      "firstText": "I've had the pleasure of witnessing Mohamad's skills in action, and I must say, they consistently deliver outstanding results. Their ability to take initiative and solve complex challenges is a valuable asset to our team.",
+      "secondName": "Mahmoud Anwari",
+      "secondJob": "CEO at marckw",
+      "secondText": "Mohamad has demonstrated exceptional professionalism and collaboration skills. Their positive impact on team dynamics and project outcomes is commendable.",
+      "thirdName": "Arash Javaheri",
+      "thirdJob": "CEO at Eynak Publications",
+      "thirdText": "I'm pleased that we worked with Mohamad; he consistently delivers projects on time, meeting expectations. His dedication and contributions have been valuable to our collaboration."
     },
     "footer": {
       "title": "Prepared to turn your ideas into reality? I'm here to help",

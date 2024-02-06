@@ -13,6 +13,8 @@ import Swal from "sweetalert2";
 import Layout from "./Layout";
 import Footer from "./Footer";
 import { motion as m } from "framer-motion";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact({ theme }) {
   const { t, handleChangeLanguage } = useLanguage();
@@ -20,6 +22,7 @@ export default function Contact({ theme }) {
   const [inputEmail, setInputEmail] = useState("");
   const [inputMessage, setinputMessage] = useState("");
   const [isInputMessageTyped, setIsInputMessageTyped] = useState(true);
+  const form = useRef();
 
   const handleInputName = (event) => {
     setInputName(event.target.value);
@@ -58,6 +61,27 @@ export default function Contact({ theme }) {
     // Update the state based on the validation result
     setIsEmailInvalid(!isValidEmail);
   };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_b2d806f", "template_ip4s6qg", form.current, {
+        publicKey: "k-RWr8Qd_X2mGSpRZ",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setInputEmail("");
+          setInputName("");
+          setinputMessage("");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   return (
     <m.div
       initial={{ opacity: 0 }}
@@ -100,12 +124,18 @@ export default function Contact({ theme }) {
             <p>+989196273474</p>
           </div>
         </div>
-        <div className="w-full sm:w-1/2 flex gap-5 flex-col mt-[5%] sm:mt-[0%]">
+        {/* <form ref={form} onSubmit={sendEmail}> */}
+        <form
+          className="w-full sm:w-1/2 flex gap-5 flex-col mt-[5%] sm:mt-[0%]"
+          ref={form}
+          onSubmit={sendEmail}
+        >
           <div className="ml-[10%] sm:ml-[0%]">
-            <Box className="flex dark:bg-darkGrayMode ">
+            <Box className="flex bg-lightBg dark:bg-darkGrayMode dark:text-lightBg dark:placeholder:text-lightBg">
               <TextField
                 fullWidth
                 label="Name"
+                name="to_name"
                 id="fullWidth"
                 value={inputName}
                 onChange={handleInputName} // Updated variable name
@@ -119,10 +149,11 @@ export default function Contact({ theme }) {
           </div>
 
           <div className=" ml-[10%] sm:ml-[0%]">
-            <Box className="flex dark:bg-darkGrayMode dark:text-lightBg dark:placeholder:text-lightBg">
+            <Box className="flex bg-lightBg dark:bg-darkGrayMode dark:text-lightBg dark:placeholder:text-lightBg">
               <TextField
                 fullWidth
                 label="Email"
+                name="from_name"
                 id="fullWidth2"
                 value={inputEmail}
                 onChange={handleInputEmail}
@@ -149,8 +180,10 @@ export default function Contact({ theme }) {
               )}
 
               <TextareaAutosize
-                className="w-full bg-lightBg border-2 border-gray custom-textarea pl-10 h-16 rounded-[4px] dark:bg-darkGrayMode"
+                className="w-full bg-lightBg border-2 dark:border-0 border-gray custom-textarea pl-10 h-16 rounded-[4px] dark:bg-darkGrayMode"
+                name="message"
                 rows={1}
+                label={"Message"}
                 value={inputMessage}
                 onChange={handleInputMessage}
                 placeholder="Type your message here"
@@ -166,14 +199,14 @@ export default function Contact({ theme }) {
             </button>
           ) : (
             <button
-              className="px-8 py-3 bg-mainOrange rounded-full text-lightBg"
+              className="px-8 py-3 bg-mainOrange rounded-full text-lightBg mr-[10%] ml-[10%] sm:ml-[0%] mb-[10%]"
               onClick={handleSave}
               disabled
             >
               {t("main.fifthPart.button")}
             </button>
           )}
-        </div>
+        </form>
       </div>
       <Footer />
     </m.div>

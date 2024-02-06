@@ -301,3 +301,17 @@ Note: Beware of modifying this element as it can break the animations - you shou
 html {
   overflow-x: hidden;
 }
+
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  color: #9ca398 !important;
+}
+
+@media (max-width: 1000px) {
+  .sm\:w-1\/2 {
+    width: 100% !important;
+  }
+
+  section.hidden.sm\:flex.w-1\/2.mt-\[12\%\].sm\:justify-end {
+    display: none;
+  }
+}

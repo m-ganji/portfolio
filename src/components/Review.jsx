@@ -42,19 +42,15 @@ export default function Review() {
             <img
               src={avatar}
               alt=""
-              className=""
+              className="rounded-full"
               style={{ height: "60px", width: "60px" }}
             />
             <span className="ml-4 w-full text-left">
-              <p className="text-xl font-bold">john doe</p>
-              <p>game dev</p>
+              <p className="text-xl font-bold">{t("main.sixPart.firstName")}</p>
+              <p>{t("main.sixPart.firstJob")}</p>
             </span>
           </div>
-          <p className="text-justify m-4">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when
-          </p>
+          <p className="text-justify m-4">{t("main.sixPart.firstText")}</p>
         </SwiperSlide>
         <SwiperSlide className="bg-darkGray dark:bg-darkGrayMode border border-gray rounded-2xl">
           <div className="flex p-8">
@@ -65,15 +61,13 @@ export default function Review() {
               style={{ height: "60px", width: "60px" }}
             />
             <span className="ml-4 w-full text-left">
-              <p className="text-xl font-bold">john doe</p>
-              <p>game dev</p>
+              <p className="text-xl font-bold">
+                {t("main.sixPart.secondName")}
+              </p>
+              <p>{t("main.sixPart.secondJob")}</p>
             </span>
           </div>
-          <p className="text-justify m-4">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when
-          </p>
+          <p className="text-justify m-4">{t("main.sixPart.secondText")}</p>
         </SwiperSlide>
         <SwiperSlide className="bg-darkGray dark:bg-darkGrayMode border border-gray rounded-2xl">
           <div className="flex p-8">
@@ -84,15 +78,11 @@ export default function Review() {
               style={{ height: "60px", width: "60px" }}
             />
             <span className="ml-4 w-full text-left">
-              <p className="text-xl font-bold">john doe</p>
-              <p>game dev</p>
+              <p className="text-xl font-bold">{t("main.sixPart.thirdName")}</p>
+              <p>{t("main.sixPart.thirdJob")}</p>
             </span>
           </div>
-          <p className="text-justify m-4">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when
-          </p>
+          <p className="text-justify m-4">{t("main.sixPart.thirdText")}</p>
         </SwiperSlide>
       </Swiper>
     </div>

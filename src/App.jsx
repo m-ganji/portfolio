@@ -2,10 +2,14 @@
 import "./App.css";
 // images
 import Developer from "./assets/developer.png";
+import DarkDeveloper from "./assets/develope-dark.png";
 import Shape from "./assets/shape.svg";
-import ShapeLight from "./assets/shape-light.svg";
+import DarkShape from "./assets/shape-dark.svg";
+import Programmer from "./assets/programmer.png";
+// import ShapeLight from "./assets/shape-light.svg";
 import lightDot from "../src/assets/dots-light.svg";
 import darkDot from "../src/assets/dots-dark.svg";
+import Resume from "../src/assets/resume/resume.pdf";
 // icons
 import { PiTelegramLogoThin } from "react-icons/pi";
 import { LuDownload } from "react-icons/lu";
@@ -79,7 +83,7 @@ function Home() {
       <Layout />
       <main className="mx-[10%] flex flex-col">
         <div className="first_part flex">
-          <section className="mt-[12%] w-full dark:text-lightBg sm:w-1/2 flex flex-col justify-center items-center">
+          <section className="mt-[17%] w-full dark:text-lightBg sm:w-1/2 flex flex-col justify-center items-center text-center">
             <h1 className="text-mainOrange">{t("main.firstPart.firstLine")}</h1>
             <h4 className="text-6xl font-semibold mt-5 text-black dark:text-lightBg flex justify-center items-center">
               {t("main.firstPart.secondLine")}
@@ -93,46 +97,70 @@ function Home() {
                   icon={<PiTelegramLogoThin />}
                 />
               </Link>
-              <ButtonCom
-                title={t("main.firstPart.firstButton")}
-                className="bg-black dark:bg-lightBg dark:text-black text-lightBg mt-5 flex justify-center items-center gap-1"
-                icon={<LuDownload />}
-              />
+              <a href={Resume}>
+                <ButtonCom
+                  title={t("main.firstPart.firstButton")}
+                  className="bg-black dark:bg-lightBg dark:text-black text-lightBg mt-5 flex justify-center items-center gap-1"
+                  icon={<LuDownload />}
+                />
+              </a>
             </div>
             <div className="flex mt-5 gap-10">
-              <FaLinkedinIn />
-              <FaGithub />
-              <FaInstagram />
-              <FaTelegram />
-              <FaWhatsapp />
+              <a href="https://www.linkedin.com/in/mganji1999">
+                <FaLinkedinIn />
+              </a>
+              <a href="https://github.com/m-ganji">
+                <FaGithub />
+              </a>
+              <a href="https://www.instagram.com/_m.ganjii_">
+                <FaInstagram />
+              </a>
+              <a href="https://t.me/Gnj1999">
+                <FaTelegram />
+              </a>
+              <a href="https://wa.me/+989196273474">
+                <FaWhatsapp />
+              </a>
             </div>
           </section>
           <section className="hidden sm:flex w-1/2 mt-[12%] sm:justify-end">
             <div className="">
               <div>
-                <img
-                  className="absolute "
-                  src={ShapeLight}
-                  height={400}
-                  width={400}
-                  alt="ShapeLight"
-                  style={{ transform: "rotate(45deg)" }}
-                />
-                <img
-                  className="absolute "
-                  src={Shape}
-                  height={400}
-                  width={400}
-                  alt="Shape"
-                />
+                {theme === "light" ? (
+                  <img
+                    className="absolute "
+                    src={Shape}
+                    height={400}
+                    width={400}
+                    alt="Shape"
+                  />
+                ) : (
+                  <img
+                    className="absolute "
+                    src={DarkShape}
+                    height={400}
+                    width={400}
+                    alt="Shape"
+                  />
+                )}
               </div>
-              <img
-                className="relative"
-                src={Developer}
-                height={400}
-                width={400}
-                alt="Developer"
-              />
+              {theme === "light" ? (
+                <img
+                  className="relative bottom-12 left-3 scale-90"
+                  src={Developer}
+                  height={400}
+                  width={400}
+                  alt="Developer"
+                />
+              ) : (
+                <img
+                  className="relative bottom-12 left-3 scale-90"
+                  src={DarkDeveloper}
+                  height={400}
+                  width={400}
+                  alt="Developer"
+                />
+              )}
             </div>
           </section>
         </div>
@@ -147,7 +175,9 @@ function Home() {
             <p className="text-2xl font-bold">{t("main.secondPart.header")}</p>
           </div>
           <div className="flex w-full">
-            <div className="w-1/2 hidden sm:flex">test</div>
+            <div className="w-1/2 hidden sm:flex">
+              <img src={Programmer} alt="" />
+            </div>
             <div className="w-full dark:text-lightBg sm:w-1/2" ref={tabsRef}>
               <TabsCom />
             </div>
