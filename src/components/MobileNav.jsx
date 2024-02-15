@@ -1,28 +1,57 @@
 import { Link, useLocation } from "react-router-dom";
 import "../../src/App.css";
 import { stack as Menu } from "react-burger-menu";
-import {
-  FaLinkedinIn,
-  FaTelegram,
-  FaWhatsapp,
-  FaGithub,
-  FaInstagram,
-} from "react-icons/fa";
+import useLanguage from "../hooks/useLanguage";
+import { useTheme } from "../context/ThemeUtils";
+import { useState } from "react";
+import Iran from "../assets/Iran.png";
+import GB from "../assets/England.png";
+import { LiaLanguageSolid } from "react-icons/lia";
 
-const MobileNav = ({ theme }) => {
+const MobileNav = ({ themeNav }) => {
   const menuStyles = {
     bmMenu: {
-      backgroundColor: theme === "dark" ? "#29283E" : "#FFF9F7",
-      Color: theme === "dark" ? "#29283E" : "#FFF9F7",
+      backgroundColor: themeNav === "dark" ? "#29283E" : "#FFF9F7",
+      Color: themeNav === "dark" ? "#29283E" : "#FFF9F7",
     },
     bmBurgerBars: {
-      backgroundColor: theme === "dark" ? "#FFF9F7" : "#29283E",
+      backgroundColor: themeNav === "dark" ? "#FFF9F7" : "#29283E",
     },
     bmItem: {
-      color: theme === "dark" ? "#FFF9F7" : "#29283E", // Use 'color' here as well
+      color: themeNav === "dark" ? "#FFF9F7" : "#29283E", // Use 'color' here as well
     },
   };
 
+  // switching the language
+  const { t, handleChangeLanguage } = useLanguage();
+
+  const [showLanguageSwitcher, setShowLanguageSwitcher] = useState(false);
+
+  const toggleLanguageSwitcher = () => {
+    setShowLanguageSwitcher((prev) => !prev);
+  };
+
+  const [selectedLanguage, setSelectedLanguage] = useState("en"); // Initial selected language
+
+  const handleLanguageSwitch = (language) => {
+    if (selectedLanguage !== language) {
+      handleChangeLanguage(language);
+      setSelectedLanguage(language);
+    }
+    setShowLanguageSwitcher(false);
+  };
+
+  const location = useLocation();
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
+
+  // toggling theme
+  const { theme, toggleTheme } = useTheme();
+  const handleButtonClick = () => {
+    toggleTheme();
+  };
   return (
     <Menu right className="bg-hamburger" styles={menuStyles}>
       <nav className="hamburger-menu">
@@ -37,14 +66,39 @@ const MobileNav = ({ theme }) => {
             <li>
               <Link to="/contact">Contact</Link>
             </li>
+            <li>
+              <button onClick={toggleLanguageSwitcher}>
+                <LiaLanguageSolid />
+              </button>
+              {showLanguageSwitcher && (
+                <div className="absolute mt-2 bg-white dark:bg-black dark:bg-gray-800 border border-gray dark:border-gray-700 rounded-3xl shadow-md right-[10%] top-[55%]">
+                  <button
+                    onClick={() => handleLanguageSwitch("en")}
+                    className={`w-full py-2 px-4 text-left hover:bg-gray-200 dark:hover:bg-gray-700 flex items-baseline gap-4 ${
+                      selectedLanguage === "en"
+                        ? "bg-mainOrange border border-gray rounded-t-3xl"
+                        : ""
+                    }`}
+                  >
+                    En
+                    <img src={GB} alt="" className="w-5 h-w-5" />
+                  </button>
+                  <div className="w-full bg-mainOrange h-[1px]"></div>
+                  <button
+                    onClick={() => handleLanguageSwitch("fa")}
+                    className={`w-full py-2 px-4 text-left hover:bg-gray-200 dark:hover:bg-gray-700 flex items-baseline gap-4 ${
+                      selectedLanguage === "fa"
+                        ? "bg-mainOrange border border-gray rounded-b-3xl"
+                        : ""
+                    }`}
+                  >
+                    Fa
+                    <img src={Iran} alt="" className="w-5 h-w-5" />
+                  </button>
+                </div>
+              )}
+            </li>
           </ul>
-        </div>
-        <div className="flex mt-5 gap-5 absolute bottom-5">
-          <FaLinkedinIn color="#F66C59" />
-          <FaGithub color="#F66C59" />
-          <FaInstagram color="#F66C59" />
-          <FaTelegram color="#F66C59" />
-          <FaWhatsapp color="#F66C59" />
         </div>
       </nav>
     </Menu>

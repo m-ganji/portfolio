@@ -16,11 +16,21 @@ export default function Footer() {
     <>
       <div className="relative bg-black dark:bg-darkGrayMode w-full h-24 flex flex-col justify-start items-center">
         <div className="flex mt-5 gap-10">
-          <FaLinkedinIn color="#F66C59" />
-          <FaGithub color="#F66C59" />
-          <FaInstagram color="#F66C59" />
-          <FaTelegram color="#F66C59" />
-          <FaWhatsapp color="#F66C59" />
+          <a href="https://www.linkedin.com/in/mganji1999">
+            <FaLinkedinIn color="#F66C59" />
+          </a>
+          <a href="https://github.com/m-ganji">
+            <FaGithub color="#F66C59" />
+          </a>
+          <a href="https://www.instagram.com/_m.ganjii_">
+            <FaInstagram color="#F66C59" />
+          </a>
+          <a href="https://t.me/Gnj1999">
+            <FaTelegram color="#F66C59" />
+          </a>
+          <a href="https://wa.me/+989196273474">
+            <FaWhatsapp color="#F66C59" />
+          </a>
         </div>
         <BsFillArrowUpCircleFill
           color="#F66C59"

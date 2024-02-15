@@ -41,7 +41,13 @@
     },
     "fourthPart": {
       "title": "Latest Projects",
-      "button": "View Website"
+      "button": "View Website",
+      "firstServiceHeader": "Web Design",
+      "firstService": "Elevate user experiences with visually stunning layouts and intuitive interfaces, blending creativity with functionality.",
+      "secondServiceHeader": "Web Development",
+      "secondService": "Transform design concepts into responsive, interactive websites, bridging front-end aesthetics with back-end functionality.",
+      "thirdServiceHeader": "Web App Development",
+      "thirdService": "Shape cutting-edge mobile experiences with platform-specific languages, delivering seamless functionality in the palm of users' hands.s"
     },
     "fifthPart": {
       "title": "Hello 👋",
@@ -52,9 +58,10 @@
       "button": "Let's Talk"
     },
     "sixPart": {
+      "header": "Reviews",
       "firstName": "Alireza Soleymanzadeh",
       "firstJob": "CEO at Sedreh",
-      "firstText": "I've had the pleasure of witnessing Mohamad's skills in action, and I must say, they consistently deliver outstanding results. Their ability to take initiative and solve complex challenges is a valuable asset to our team.",
+      "firstText": "Mohamad consistently delivers outstanding results with initiative and problem-solving skills, making them a valuable asset to our team.",
       "secondName": "Mahmoud Anwari",
       "secondJob": "CEO at marckw",
       "secondText": "Mohamad has demonstrated exceptional professionalism and collaboration skills. Their positive impact on team dynamics and project outcomes is commendable.",

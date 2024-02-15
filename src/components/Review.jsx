@@ -4,6 +4,7 @@ import darkDot from "../assets//dots-dark.svg";
 import avatar from "../assets/avatar-1.png";
 import avatar2 from "../assets/avatar-2.png";
 import avatar3 from "../assets/avatar-3.png";
+import { Pagination } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useTheme } from "../context/ThemeUtils";
@@ -21,23 +22,23 @@ export default function Review() {
         ) : (
           <img src={darkDot} alt="Dark Dot" />
         )}
-        <p className="text-2xl font-bold">Reviews</p>
+        <p className="text-2xl font-bold">{t("main.sixPart.header")}</p>
       </div>
       <Swiper
         spaceBetween={50}
-        slidesPerView={3}
-        // direction="horizental"
+        slidesPerView={1}
+        pagination={{
+          clickable: true,
+        }}
         breakpoints={{
-          768: {
+          1000: {
             slidesPerView: 2,
           },
-          1100: {
-            slidesPerView: 3,
-          },
         }}
-        className="swiper-2"
+        modules={[Pagination]}
+        className="swiper-1"
       >
-        <SwiperSlide className="bg-darkGray dark:bg-darkGrayMode border border-gray rounded-2xl ">
+        <SwiperSlide className="bg-darkGray dark:bg-darkGrayMode border border-gray rounded-2xl">
           <div className="flex p-8">
             <img
               src={avatar}
@@ -50,14 +51,14 @@ export default function Review() {
               <p>{t("main.sixPart.firstJob")}</p>
             </span>
           </div>
-          <p className="text-justify m-4">{t("main.sixPart.firstText")}</p>
+          <p className="m-4 text-center">{t("main.sixPart.firstText")}</p>
         </SwiperSlide>
         <SwiperSlide className="bg-darkGray dark:bg-darkGrayMode border border-gray rounded-2xl">
           <div className="flex p-8">
             <img
-              src={avatar2}
+              src={avatar3}
               alt=""
-              className=""
+              className="rounded-full"
               style={{ height: "60px", width: "60px" }}
             />
             <span className="ml-4 w-full text-left">
@@ -67,14 +68,14 @@ export default function Review() {
               <p>{t("main.sixPart.secondJob")}</p>
             </span>
           </div>
-          <p className="text-justify m-4">{t("main.sixPart.secondText")}</p>
+          <p className="text-center m-4">{t("main.sixPart.secondText")}</p>
         </SwiperSlide>
         <SwiperSlide className="bg-darkGray dark:bg-darkGrayMode border border-gray rounded-2xl">
           <div className="flex p-8">
             <img
-              src={avatar3}
+              src={avatar2}
               alt=""
-              className=""
+              className="rounded-full"
               style={{ height: "60px", width: "60px" }}
             />
             <span className="ml-4 w-full text-left">
@@ -82,7 +83,7 @@ export default function Review() {
               <p>{t("main.sixPart.thirdJob")}</p>
             </span>
           </div>
-          <p className="text-justify m-4">{t("main.sixPart.thirdText")}</p>
+          <p className="text-center m-4">{t("main.sixPart.thirdText")}</p>
         </SwiperSlide>
       </Swiper>
     </div>

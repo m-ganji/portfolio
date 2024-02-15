@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import firstSite from "../assets/firstSite.png";
 import secondSite from "../assets/forkify.png";
 import thirdSite from "../assets/bankist.png";
+import fourthSite from "../assets/fourthSite.png";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../App.css";
@@ -25,9 +26,9 @@ export default function Projects() {
         ) : (
           <img src={darkDot} alt="Dark Dot" />
         )}
-        <p className="text-2xl font-bold ml-3"> {t("main.fourthPart.title")}</p>
+        <p className="text-2xl font-bold">{t("main.fourthPart.title")}</p>
       </div>
-      <div className="w-full sm:w-3/4">
+      <div className="w-full sm:w-[74%]">
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
@@ -45,8 +46,8 @@ export default function Projects() {
           <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-lg shadow-2xl mb-56">
             <div
               className="relative justify-center
-                bg-lightWork dark:bg-darkWork xl:bg-work_project_bg_light
-                xl:bg-[110%] xl:bg-no-repeat overflow-hidden p-11 h-3/4 w-full flex items-start border-gray rounded-lg "
+              bg-lightWork dark:bg-darkWork 
+                h-3/4 w-full flex "
             >
               <img
                 src={firstSite}
@@ -64,6 +65,7 @@ export default function Projects() {
               </Link>
             </div>
           </SwiperSlide>
+
           <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-lg shadow-2xl mb-56">
             <div
               className="relative justify-center

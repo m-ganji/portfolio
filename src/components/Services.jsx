@@ -29,14 +29,9 @@ export default function Services() {
             />
             <div className="relative mt-10">
               <h2 className="font-bold text-xl flex justify-center">
-                Web Design{" "}
+                {t("main.fourthPart.firstServiceHeader")}
               </h2>
-              <p>
-                Elevate user experiences with visually stunning layouts and
-                intuitive interfaces, blending creativity with functionality.
-                {/* Persian: ارتقای تجربه کاربر با طرح بندی های خیره کننده از نظر بصری و رابط های کاربری گویا
-                Persian: ترکیب خلاقیت با کارکرد */}
-              </p>
+              <p className="text-center">{t("main.fourthPart.firstService")}</p>
             </div>
           </div>
 
@@ -47,13 +42,10 @@ export default function Services() {
             />
             <div className="relative mt-10">
               <h2 className="font-bold text-xl flex justify-center">
-                Web Developement
+                {t("main.fourthPart.secondServiceHeader")}
               </h2>
-              <p>
-                Transform design concepts into responsive, interactive websites,
-                bridging front-end aesthetics with back-end functionality.
-                {/* Persian: تبدیل مفاهیم طراحی به وب سایت های پاسخگو و تعاملی
-                Persian: پیوند زیبایی شناسی frontend با کارکرد back-end */}
+              <p className="text-center">
+                {t("main.fourthPart.secondService")}{" "}
               </p>
             </div>
           </div>
@@ -65,15 +57,9 @@ export default function Services() {
             />
             <div className="relative mt-10">
               <h2 className="font-bold text-xl flex justify-center">
-                App developer
+                {t("main.fourthPart.thirdServiceHeader")}
               </h2>
-              <p>
-                Shape cutting-edge mobile experiences with platform-specific
-                languages, delivering seamless functionality in the palm of
-                users' hands.
-                {/* Persian: شکل دادن به تجربه های موبایلی پیشرفته با زبان های خاص پلتفرم
-                Persian: ارائه عملکرد یکپارچه در کف دست کاربران */}
-              </p>
+              <p className="text-center">{t("main.fourthPart.thirdService")}</p>
             </div>
           </div>
         </div>

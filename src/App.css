@@ -94,44 +94,6 @@ span.swiper-pagination-bullet {
   background-color: #f66c59;
 }
 
-@media (max-width: 640px) {
-  .swiper-2 .swiper-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .bm-burger-button {
-    position: fixed;
-    right: 20% !important;
-    top: 2.5% !important;
-  }
-  button.flex.justify-center.items-center.dark\:text-lightBg.dark\:bg-darkGrayMode.rounded-full.w-10.h-10.shadow-xl.bg-transparent.dark\:shadow-darkWork {
-    position: fixed;
-    right: 30% !important;
-    top: 1.5% !important;
-  }
-}
-
-@media (max-width: 1100px) {
-  .swiper-2 .swiper-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .swiper-2
-    .swiper-slide.bg-darkGray.dark\:bg-darkGrayMode.border.border-gray.rounded-2xl.swiper-slide-active {
-    width: 100% !important;
-  }
-  .swiper-2
-    .swiper-slide.bg-darkGray.dark\:bg-darkGrayMode.border.border-gray.rounded-2xl.swiper-slide-next {
-    width: 100% !important;
-  }
-  .swiper-2
-    .swiper-slide.bg-darkGray.dark\:bg-darkGrayMode.border.border-gray.rounded-2xl {
-    width: 100% !important;
-  }
-}
-
 .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
   color: #f66c59 !important;
   border-style: dotted !important;
@@ -314,4 +276,38 @@ html {
   section.hidden.sm\:flex.w-1\/2.mt-\[12\%\].sm\:justify-end {
     display: none;
   }
+}
+@media only screen and (max-width: 640px) {
+  .border.border-gray.p-4.flex.justify-center.items-center.mt-14.sm\:mt-0.bg-darkGray.dark\:bg-darkGrayMode.rounded-2xl,
+  .border.border-gray.p-4.flex.justify-center.items-center.relative.rounded-2xl {
+    margin-bottom: 8%;
+  }
+}
+
+@media only screen and (min-width: 641px) and (max-width: 770px) {
+  .border.border-gray.p-4.flex.justify-center.items-center.mt-14.sm\:mt-0.bg-darkGray.dark\:bg-darkGrayMode.rounded-2xl,
+  .border.border-gray.p-4.flex.justify-center.items-center.relative.rounded-2xl {
+    margin-bottom: 8%;
+  }
+}
+
+@media (max-width: 999px) {
+  .swiper {
+    height: 420px;
+  }
+  .flex.flex-col.sm\:flex-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+button.bg-mainOrange.text-lightBg.mt-5.gap-1.mb-5.rounded-full.p-3 {
+  margin-block-start: auto;
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  position: absolute;
+  bottom: -3px;
 }
