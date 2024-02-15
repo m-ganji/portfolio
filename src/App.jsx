@@ -83,7 +83,7 @@ function Home() {
       <Layout />
       <main className="mx-[10%] flex flex-col">
         <div className="first_part flex">
-          <section className="mt-[20%] w-full dark:text-lightBg sm:w-1/2 flex flex-col justify-center items-center text-center">
+          <section className="mt-[24%] w-full dark:text-lightBg sm:w-1/2 flex flex-col justify-center items-center text-center">
             <h1 className="text-mainOrange">{t("main.firstPart.firstLine")}</h1>
             <h4 className="text-6xl font-semibold mt-5 text-black dark:text-lightBg flex justify-center items-center">
               {t("main.firstPart.secondLine")}
