@@ -247,10 +247,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   height: 100vh;
 }
 
+@media (max-width: 639px) {
+  .w-full.sm\:w-1\/2.flex.gap-5.flex-col.mt-\[5\%\].sm\:mt-\[0\%\] {
+    margin-right: 0% !important;
+  }
+}
 .w-full.sm\:w-1\/2.flex.gap-5.flex-col.mt-\[5\%\].sm\:mt-\[0\%\] {
   margin-right: 10%;
 }
-
 @media (max-width: 639px) {
   .ml-\[10\%\].sm\:ml-\[0\%\] {
     margin-right: 10% !important;
