@@ -1,4 +1,4 @@
-import MobileNav from "./mobileNav";
+import MobileNav from "./MobileNav";
 import Logo from "../assets/Logo.png";
 import Iran from "../assets/Iran.png";
 import GB from "../assets/England.png";
