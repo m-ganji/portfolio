@@ -77,9 +77,9 @@ export default function Layout() {
               {t("header.thirdButton")}
             </div>
           </Link>
-          <button onClick={toggleLanguageSwitcher}>
+          {/* <button onClick={toggleLanguageSwitcher}>
             <LiaLanguageSolid />
-          </button>
+          </button> */}
           {showLanguageSwitcher && (
             <div className="absolute mt-2 bg-white dark:bg-black dark:bg-gray-800 border border-gray dark:border-gray-700 rounded-3xl shadow-md right-[10%] top-[55%]">
               <button
