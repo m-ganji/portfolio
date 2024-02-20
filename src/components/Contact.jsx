@@ -109,17 +109,17 @@ export default function Contact({ theme }) {
           <img src={contact} alt="" className="w-[400px] h-[400px]" />
         </div>
       </div>
-      <div className="w-full flex flex-col sm:flex-row mt-[5%]">
-        <div className="w-full sm:w-1/2 ml-[0%] sm:ml-[10%] ">
-          <div className="flex items-center gap-5 justify-center sm:justify-start">
+      <div className="w-full flex flex-col  sm:flex-row mt-[5%]">
+        <div className="w-full flex justify-center flex-col sm:w-1/2 ml-[0%] sm:ml-[10%] ">
+          <div className="flex items-center gap-5">
             <MdOutlineEmail color="#F66C59" />
             <p>Mohamad.ganjif@gmail.com</p>
           </div>
-          <div className="flex items-center gap-5 mt-10 justify-center sm:justify-start mr-[70px] sm:mr-0">
+          <div className="flex justify-center gap-5 mt-5">
             <HiOutlineHome color="#F66C59" />
             <p>{t("main.fifthPart.tehran")}</p>
           </div>
-          <div className="flex items-center gap-5 mt-10 justify-center sm:justify-start mr-20 sm:r-0">
+          <div className="flex justify-center gap-5 mt-5">
             <FiPhoneCall color="#F66C59" />
             <p>+989196273474</p>
           </div>
