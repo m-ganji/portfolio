@@ -112,8 +112,8 @@ export default function Contact({ theme }) {
       <div className="w-full flex justify-center flex-col sm:flex-row ">
         <div className="w-full flex flex-col justify-center sm:w-1/2  ml-[0%] sm:ml-[10%]">
           <div className="w-full flex">
-            <MdOutlineEmail className="w-[5%]" color="#F66C59" />
-            <p className="w-[95%] flex justify-end mr-3 sm:mr-10 text-xs">
+            <MdOutlineEmail className="w-[10%]" color="#F66C59" />
+            <p className="w-[90%] flex justify-end mr-3 sm:mr-10 text-xs">
               Mohamad.ganjif@gmail.com
             </p>
           </div>
