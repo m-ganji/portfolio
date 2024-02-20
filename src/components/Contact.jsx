@@ -105,109 +105,119 @@ export default function Contact({ theme }) {
             <p className="w-40 mt-5">{t("main.fifthPart.workSpan")}</p>
           </div>
         </div>
-        <div className="w-full sm:w-1/2 flex justify-center items-start mt-[25%] sm:mt-[12%] mr-[0%] sm:mr-[10%]">
+        <div className="w-full sm:w-1/2 flex justify-center items-start sm:mt-[12%] mr-[0%] sm:mr-[10%]">
           <img src={contact} alt="" className="w-[400px] h-[400px]" />
         </div>
       </div>
-      <div className="w-full flex flex-col  sm:flex-row mt-[5%]">
-        <div className="w-full flex justify-center flex-col sm:w-1/2 ml-[0%] sm:ml-[10%] ">
-          <div className="flex items-center gap-5">
-            <MdOutlineEmail color="#F66C59" />
-            <p>Mohamad.ganjif@gmail.com</p>
+      <div className="w-full flex justify-center flex-col sm:flex-row ">
+        <div className="w-full flex flex-col justify-center sm:w-1/2  ml-[0%] sm:ml-[10%]">
+          <div className="w-full flex">
+            <MdOutlineEmail className="w-[10%]" color="#F66C59" />
+            <p className="w-[90%] flex justify-end mr-3 sm:mr-10">
+              Mohamad.ganjif@gmail.com
+            </p>
           </div>
-          <div className="flex justify-center gap-5 mt-5">
-            <HiOutlineHome color="#F66C59" />
-            <p>{t("main.fifthPart.tehran")}</p>
+          <div className="w-full flex mt-7">
+            <HiOutlineHome className="w-[10%]" color="#F66C59" />
+            <p className="w-[90%] flex justify-end mr-3 sm:mr-10">
+              {t("main.fifthPart.tehran")}
+            </p>
           </div>
-          <div className="flex justify-center gap-5 mt-5">
-            <FiPhoneCall color="#F66C59" />
-            <p>+989196273474</p>
+          <div className="w-full flex mt-7 mb-7">
+            <FiPhoneCall className="w-[10%]" color="#F66C59" />
+            <p className="w-[90%] flex justify-end mr-3 sm:mr-10">
+              +989196273474
+            </p>
           </div>
         </div>
-        {/* <form ref={form} onSubmit={sendEmail}> */}
-        <form
-          className="w-full sm:w-1/2 flex gap-5 flex-col mt-[5%] sm:mt-[0%]"
-          ref={form}
-          onSubmit={sendEmail}
-        >
-          <div className="ml-[10%] sm:ml-[0%]">
-            <Box className="flex bg-lightBg dark:bg-darkGrayMode dark:text-lightBg dark:placeholder:text-lightBg">
-              <TextField
-                fullWidth
-                label="Name"
-                name="to_name"
-                id="fullWidth"
-                value={inputName}
-                onChange={handleInputName} // Updated variable name
-                InputProps={{
-                  endAdornment: (
-                    <CgProfile style={{ marginRight: "8px" }} color="#F66C59" />
-                  ),
-                }}
-              />
-            </Box>
-          </div>
-
-          <div className=" ml-[10%] sm:ml-[0%]">
-            <Box className="flex bg-lightBg dark:bg-darkGrayMode dark:text-lightBg dark:placeholder:text-lightBg">
-              <TextField
-                fullWidth
-                label="Email"
-                name="from_name"
-                id="fullWidth2"
-                value={inputEmail}
-                onChange={handleInputEmail}
-                error={isEmailInvalid}
-                helperText={isEmailInvalid ? t("main.footer.errorEmail") : ""}
-                InputProps={{
-                  endAdornment: (
-                    <MdOutlineEmail
-                      style={{ marginRight: "8px" }}
-                      color="#F66C59"
-                    />
-                  ),
-                }}
-              />
-            </Box>
-          </div>
-          <div>
-            <div className="relative  ml-[10%] sm:ml-[0%]">
-              {isInputMessageTyped && (
-                <BiSolidMessageDetail
-                  color="#F66C59"
-                  className="absolute right-5 top-5 "
+        <div className="w-full sm:w-1/2 flex justify-center items-start mt-[25%] sm:mt-[12%] mr-[0%] sm:mr-[10%] bg-white">
+          <form
+            className="w-full  flex gap-5 flex-col mt-[5%] sm:mt-[0%]"
+            ref={form}
+            onSubmit={sendEmail}
+          >
+            <div className="ml-[10%] sm:ml-[0%] ">
+              <Box className="flex bg-lightBg dark:bg-darkGrayMode w-full dark:text-lightBg dark:placeholder:text-lightBg">
+                <TextField
+                  fullWidth
+                  label="Name"
+                  name="to_name"
+                  id="fullWidth"
+                  value={inputName}
+                  onChange={handleInputName} // Updated variable name
+                  InputProps={{
+                    endAdornment: (
+                      <CgProfile
+                        style={{ marginRight: "8px" }}
+                        color="#F66C59"
+                      />
+                    ),
+                  }}
                 />
-              )}
-
-              <TextareaAutosize
-                className="w-full bg-lightBg border-2 dark:border-0 border-gray custom-textarea pl-10 h-16 rounded-[4px] dark:bg-darkGrayMode"
-                name="message"
-                rows={1}
-                label={"Message"}
-                value={inputMessage}
-                onChange={handleInputMessage}
-                placeholder="Type your message here"
-              />
+              </Box>
             </div>
-          </div>
-          {!isEmailInvalid ? (
-            <button
-              className="px-8 py-3 bg-mainOrange rounded-full text-lightBg mr-[10%] ml-[10%] sm:ml-[0%] mb-[10%]"
-              onClick={handleSave}
-            >
-              {t("main.fifthPart.button")}
-            </button>
-          ) : (
-            <button
-              className="px-8 py-3 bg-mainOrange rounded-full text-lightBg mr-[10%] ml-[10%] sm:ml-[0%] mb-[10%]"
-              onClick={handleSave}
-              disabled
-            >
-              {t("main.fifthPart.button")}
-            </button>
-          )}
-        </form>
+
+            <div className=" ml-[10%] sm:ml-[0%]">
+              <Box className="flex bg-lightBg dark:bg-darkGrayMode dark:text-lightBg dark:placeholder:text-lightBg">
+                <TextField
+                  fullWidth
+                  label="Email"
+                  name="from_name"
+                  id="fullWidth2"
+                  value={inputEmail}
+                  onChange={handleInputEmail}
+                  error={isEmailInvalid}
+                  helperText={isEmailInvalid ? t("main.footer.errorEmail") : ""}
+                  InputProps={{
+                    endAdornment: (
+                      <MdOutlineEmail
+                        style={{ marginRight: "8px" }}
+                        color="#F66C59"
+                      />
+                    ),
+                  }}
+                />
+              </Box>
+            </div>
+            <div>
+              <div className="relative  ml-[10%] sm:ml-[0%]">
+                {isInputMessageTyped && (
+                  <BiSolidMessageDetail
+                    color="#F66C59"
+                    className="absolute right-5 top-5 "
+                  />
+                )}
+                <TextareaAutosize
+                  className="w-full bg-lightBg border-2 dark:border-0 border-gray custom-textarea pl-10 h-16 rounded-[4px] dark:bg-darkGrayMode"
+                  name="message"
+                  rows={1}
+                  label={"Message"}
+                  value={inputMessage}
+                  onChange={handleInputMessage}
+                  placeholder="Type your message here"
+                />
+              </div>
+            </div>
+            {!isEmailInvalid ? (
+              <button
+                className="px-8 py-3 bg-mainOrange rounded-full text-lightBg mr-[10%] ml-[10%] sm:ml-[0%] mb-[10%]"
+                onClick={handleSave}
+              >
+                {t("main.fifthPart.button")}
+              </button>
+            ) : (
+              <button
+                className="px-8 py-3 bg-mainOrange rounded-full text-lightBg mr-[10%] ml-[10%] sm:ml-[0%] mb-[10%]"
+                onClick={handleSave}
+                disabled
+              >
+                {t("main.fifthPart.button")}
+              </button>
+            )}
+          </form>
+        </div>
       </div>
+
       <Footer />
     </m.div>
   );
