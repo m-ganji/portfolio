@@ -9,16 +9,23 @@ import GB from "../assets/England.png";
 import { LiaLanguageSolid } from "react-icons/lia";
 
 const MobileNav = ({ themeNav }) => {
+  const { theme, toggleTheme } = useTheme();
+  const handleButtonClick = () => {
+    toggleTheme();
+  };
+
   const menuStyles = {
     bmMenu: {
-      backgroundColor: themeNav === "dark" ? "#29283E" : "#FFF9F7",
-      Color: themeNav === "dark" ? "#29283E" : "#FFF9F7",
+      backgroundColor: theme === "dark" ? "#29283E" : "#FFF9F7",
+      // Color: theme === "dark" ? "#FF0000" : "#0000FF",
     },
     bmBurgerBars: {
-      backgroundColor: themeNav === "dark" ? "#FFF9F7" : "#29283E",
+      backgroundColor: theme === "dark" ? "#FFF9F7" : "#242322",
+      // Color: theme === "dark" ? "#FF0000" : "#0000FF",
     },
     bmItem: {
-      color: themeNav === "dark" ? "#FFF9F7" : "#29283E", // Use 'color' here as well
+      backgroundColor: theme === "dark" ? "#29283E" : "#FFF9F7",
+      color: theme === "dark" ? "#FFF9F7" : "#29283E", // Use 'color' here as well
     },
   };
 
@@ -30,7 +37,6 @@ const MobileNav = ({ themeNav }) => {
   const toggleLanguageSwitcher = () => {
     setShowLanguageSwitcher((prev) => !prev);
   };
-
   const [selectedLanguage, setSelectedLanguage] = useState("en"); // Initial selected language
 
   const handleLanguageSwitch = (language) => {
@@ -47,16 +53,11 @@ const MobileNav = ({ themeNav }) => {
     return location.pathname === path;
   };
 
-  // toggling theme
-  const { theme, toggleTheme } = useTheme();
-  const handleButtonClick = () => {
-    toggleTheme();
-  };
   return (
-    <Menu right className="bg-hamburger" styles={menuStyles}>
+    <Menu className="bg-hamburger" styles={menuStyles}>
       <nav className="hamburger-menu">
         <div>
-          <ul>
+          <ul className="flex flex-col gap-5">
             <li>
               <Link to="/">Home</Link>
             </li>
