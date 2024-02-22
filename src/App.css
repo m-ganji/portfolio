@@ -345,10 +345,7 @@ button.bg-mainOrange.text-lightBg.mt-5.gap-1.mb-5.rounded-full.p-3 {
   width: 50% !important;
 }
 
-/* header.h-\[10\%\].hidden.sm\:flex.justify-between.shadow-xl.fixed.bg-lightBg.dark\:bg-black.w-full.z-20 {
-  box-shadow: 0px 0px 42px -10px rgba(0, 0, 0, 0.5);
+.bm-menu-wrap.bg-hamburger {
+  position: fixed;
+  top: 0px;
 }
-
-header.h-\[10\%\].hidden.sm\:flex.justify-between.shadow-xl.fixed.bg-lightBg.dark\:bg-black.w-full.z-20 {
-  box-shadow: 0px 0px 42px -10px rgb(255 255 255 / 50%);
-} */

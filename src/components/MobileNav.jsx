@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import "../../src/App.css";
-import { stack as Menu } from "react-burger-menu";
+import { slide as Menu } from "react-burger-menu";
 import useLanguage from "../hooks/useLanguage";
 import { useTheme } from "../context/ThemeUtils";
 import { useState } from "react";
@@ -54,7 +54,7 @@ const MobileNav = ({ themeNav }) => {
   };
 
   return (
-    <Menu className="bg-hamburger" styles={menuStyles}>
+    <Menu right className="bg-hamburger" styles={menuStyles}>
       <nav className="hamburger-menu">
         <div>
           <ul className="flex flex-col gap-5">
