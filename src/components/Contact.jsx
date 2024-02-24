@@ -130,7 +130,7 @@ export default function Contact({ theme }) {
             </p>
           </div>
         </div>
-        <div className="w-full sm:w-1/2 flex justify-center items-start mt-[25%] sm:mt-[12%] mr-[0%] sm:mr-[10%] bg-white">
+        <div className="w-full sm:w-1/2 flex justify-center items-start mt-[25%] sm:mt-[12%] mr-[0%] sm:mr-[10%] bg-white dark:bg-black">
           <form
             className="w-full  flex gap-5 flex-col mt-[5%] sm:mt-[0%]"
             ref={form}
