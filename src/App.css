@@ -351,3 +351,8 @@ button.bg-mainOrange.text-lightBg.mt-5.gap-1.mb-5.rounded-full.p-3 {
   position: fixed;
   top: 0px;
 }
+
+.MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: white !important;
+  background-color: #f66c59 !important;
+}
