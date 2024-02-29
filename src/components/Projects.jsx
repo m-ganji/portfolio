@@ -46,8 +46,8 @@ export default function Projects() {
           <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-lg shadow-2xl mb-56">
             <div
               className="relative justify-center
-              bg-lightWork dark:bg-darkWork 
-                h-3/4 w-full flex "
+        dark:bg-darkWork bg-work_project_bg_light
+        xl:bg-[110%] xl:bg-no-repeat overflow-hidden p-11 h-3/4 w-full flex items-start border-gray rounded-lg"
             >
               <img
                 src={firstSite}
@@ -69,8 +69,8 @@ export default function Projects() {
           <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-lg shadow-2xl mb-56">
             <div
               className="relative justify-center
-              bg-lightWork dark:bg-darkWork xl:bg-work_project_bg_light
-               xl:bg-[110%] xl:bg-no-repeat overflow-hidden p-11 h-3/4 w-full flex items-start border-gray rounded-lg "
+             dark:bg-darkWork bg-work_project_bg_light
+             xl:bg-[110%] xl:bg-no-repeat overflow-hidden p-11 h-3/4 w-full flex items-start border-gray rounded-lg"
             >
               <img
                 src={secondSite}
@@ -86,8 +86,8 @@ export default function Projects() {
           <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-lg shadow-2xl mb-56">
             <div
               className="relative justify-center
-              bg-lightWork dark:bg-darkWork xl:bg-work_project_bg_light
-               xl:bg-[110%] xl:bg-no-repeat overflow-hidden p-11 h-3/4 w-full flex items-start border-gray rounded-lg "
+            dark:bg-darkWork bg-work_project_bg_light
+            xl:bg-[110%] xl:bg-no-repeat overflow-hidden p-11 h-3/4 w-full flex items-start border-gray rounded-lg"
             >
               <img
                 src={thirdSite}
