@@ -53,7 +53,6 @@ export default function TabsCom() {
     setValue(newValue);
   };
 
-  // switching the language
   const { t, handleChangeLanguage } = useLanguage();
 
   return (
