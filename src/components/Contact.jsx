@@ -113,19 +113,19 @@ export default function Contact({ theme }) {
         <div className="w-full flex flex-col justify-center sm:w-1/2  ml-[0%] sm:ml-[10%]">
           <div className="w-full flex">
             <MdOutlineEmail className="w-[10%]" color="#F66C59" />
-            <p className="w-[90%] flex justify-end mr-3 sm:mr-10 text-xs">
+            <p className="w-[90%] flex justify-end mr-3 sm:mr-10 sm:text-base text-xs">
               Mohamad.ganjif@gmail.com
             </p>
           </div>
           <div className="w-full flex mt-7">
             <HiOutlineHome className="w-[10%]" color="#F66C59" />
-            <p className="w-[90%] flex justify-end mr-3 sm:mr-10 text-xs">
+            <p className="w-[90%] flex justify-end mr-3 sm:mr-10 sm:text-base text-xs">
               {t("main.fifthPart.tehran")}
             </p>
           </div>
           <div className="w-full flex mt-7 mb-7">
             <FiPhoneCall className="w-[10%]" color="#F66C59" />
-            <p className="w-[90%] flex justify-end mr-3 sm:mr-10 text-xs">
+            <p className="w-[90%] flex justify-end mr-3 sm:mr-10 sm:text-base text-xs">
               +989196273474
             </p>
           </div>
