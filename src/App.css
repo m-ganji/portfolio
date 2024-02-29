@@ -274,6 +274,10 @@ html {
   color: #9ca398 !important;
 }
 
+.dark .MuiInputBase-input {
+  color: #fff6f2 !important;
+}
+
 @media (max-width: 1000px) {
   .sm\:w-1\/2 {
     width: 100% !important;
