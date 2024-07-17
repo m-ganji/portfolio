@@ -70,11 +70,11 @@ export default function Layout() {
   return (
     <>
       <header
-        className="h-[10%] hidden sm:flex justify-between shadow-xl fixed bg-lightBg dark:bg-black w-full z-20"
+        className="h-[80px] hidden sm:flex justify-between shadow-xl fixed bg-lightBg dark:bg-black w-full z-20"
         style={shadowStyle}
       >
         <Link to="/" className=" ml-[10%]">
-          <img src={Logo} alt="" className="h-20 fade-enter" />
+          <img src={Logo} alt="" className="h-20 w-20 flex justify-center items-center fade-enter" />
         </Link>
         <div className="flex justify-start items-center gap-5 p-2 dark:text-lightBg mr-[10%]">
           <Link to="/" className="" style={linkStyle}>
