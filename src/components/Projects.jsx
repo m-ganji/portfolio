@@ -84,7 +84,7 @@ export default function Projects() {
              xl:bg-[110%] xl:bg-no-repeat overflow-hidden h-3/4 w-full flex items-start border-creamy rounded-"
             >
               <span className="text-white bg-mainOrange p-2 rounded-full absolute left-0 ml-2 mt-2 text-sm">
-                REACT JS
+                HTML + CSS + JS
               </span>
               <img
                 src={thirdSite}
@@ -108,7 +108,7 @@ export default function Projects() {
              xl:bg-[110%] xl:bg-no-repeat overflow-hidden h-3/4 w-full flex items-start border-creamy rounded-"
             >
               <span className="text-white bg-mainOrange p-2 rounded-full absolute left-0 ml-2 mt-2 text-sm">
-                REACT JS
+                HTML + CSS + JS
               </span>
               <img
                 src={secondSite}
