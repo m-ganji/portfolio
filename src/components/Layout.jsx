@@ -132,7 +132,7 @@ export default function Layout() {
         style={shadowStyle}
       >
         <Link to="/" className=" ml-[10%]">
-          <img src={Logo} alt="" className="ml-[10%]" />
+        <img src={Logo} alt="" className="h-14 ml-[10%]" />
         </Link>
         <div className="flex justify-center items-center gap-1 p-2 mr-[20%] sm:mr-[15%] ">
           <button className="flex justify-center items-center  dark:text-lightBg dark:bg-darkGrayMode rounded-full w-10 h-10 shadow-xl bg-transparent dark:shadow-darkWork">
