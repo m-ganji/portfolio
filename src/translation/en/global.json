@@ -41,7 +41,8 @@
     },
     "fourthPart": {
       "title": "Latest Projects",
-      "button": "View Website",
+      "paragraph": "Check out my recent projects!",
+      "button": "View Project",
       "firstServiceHeader": "Web Design",
       "firstService": "Elevate user experiences with visually stunning layouts and intuitive interfaces, blending creativity with functionality.",
       "secondServiceHeader": "Web Development",

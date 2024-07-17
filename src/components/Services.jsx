@@ -35,7 +35,7 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="border border-gray p-4 flex justify-center items-center mt-14 sm:mt-0 bg-darkGray dark:bg-darkGrayMode rounded-2xl">
+          <div className="border border-gray p-4 flex justify-center items-center mt-14 sm:mt-0 bg-lightBg dark:bg-darkGrayMode rounded-2xl">
             <MdOutlineDeveloperMode
               className="w-[80px] h-[80px] mb-44 absolute bg-transparent dark:bg-black"
               color="#F66C59"

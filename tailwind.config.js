@@ -14,6 +14,7 @@ export default {
       darkWork: "#27263A",
       review: "#EDE9E8",
       white: "#FFFFFF",
+      creamy: "#F8F3F2",
     },
     extend: {
       fontFamily: {
