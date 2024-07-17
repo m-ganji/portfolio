@@ -4,6 +4,7 @@ import Iran from "../assets/Iran.png";
 import GB from "../assets/England.png";
 import useLanguage from "../hooks/useLanguage";
 import { PiSunDimLight } from "react-icons/pi";
+import { PiMoon } from "react-icons/pi";
 import { LiaLanguageSolid } from "react-icons/lia";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
@@ -74,7 +75,11 @@ export default function Layout() {
         style={shadowStyle}
       >
         <Link to="/" className=" ml-[10%]">
-          <img src={Logo} alt="" className="h-20 w-20 flex justify-center items-center fade-enter" />
+          <img
+            src={Logo}
+            alt=""
+            className="h-20 w-20 flex justify-center items-center fade-enter"
+          />
         </Link>
         <div className="flex justify-start items-center gap-5 p-2 dark:text-lightBg mr-[10%]">
           <Link to="/" className="" style={linkStyle}>
@@ -123,7 +128,7 @@ export default function Layout() {
             </div>
           )}
           <button onClick={handleButtonClick}>
-            <PiSunDimLight />
+            {theme == "light" ? <PiSunDimLight /> : <PiMoon />}
           </button>
         </div>
       </header>
@@ -132,7 +137,7 @@ export default function Layout() {
         style={shadowStyle}
       >
         <Link to="/" className=" ml-[10%]">
-        <img src={Logo} alt="" className="h-14 ml-[10%]" />
+          <img src={Logo} alt="" className="h-14 ml-[10%]" />
         </Link>
         <div className="flex justify-center items-center gap-1 p-2 mr-[20%] sm:mr-[15%] ">
           <button className="flex justify-center items-center  dark:text-lightBg dark:bg-darkGrayMode rounded-full w-10 h-10 shadow-xl bg-transparent dark:shadow-darkWork">
