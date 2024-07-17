@@ -46,7 +46,6 @@ export default function Projects() {
             1000: {
               slidesPerView: 1,
             },
-            // Add a new breakpoint for larger screens
             1001: {
               slidesPerView: 2,
             },
@@ -71,18 +70,11 @@ export default function Projects() {
             </div>
             <div className="flex justify-center items-center flex-col ">
               <p className="font-bold m-2">Sedreh</p>
-              {/* <Link
-                to="https://sedrehai.ir/"
-                className="flex justify-center items-center "
-              > */}
-              {/* <ButtonCom
-                title={t("main.fourthPart.button")}
-                className="bg-mainOrange text-lightBg gap-1 w-[150px] p-5 flex items-center justify-center whitespace-nowrap"
-              /> */}
-              <button className="bg-mainOrange text-lightBg w-36 p-2 rounded-2xl mb-16 flex items-center justify-center whitespace-nowrap">
-                {t("main.fourthPart.button")}
-              </button>
-              {/* </Link> */}
+              <Link to="https://sedrehai.ir/">
+                <button className="bg-mainOrange text-lightBg w-36 p-2 rounded-2xl mb-16 flex items-center justify-center whitespace-nowrap">
+                  {t("main.fourthPart.button")}
+                </button>
+              </Link>
             </div>
           </SwiperSlide>
           <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-3xl mb-56">
@@ -101,19 +93,12 @@ export default function Projects() {
               />
             </div>
             <div className="flex justify-center items-center flex-col ">
-              <p className="font-bold m-2">Sedreh</p>
-              {/* <Link
-                to="https://sedrehai.ir/"
-                className="flex justify-center items-center "
-              > */}
-              {/* <ButtonCom
-                title={t("main.fourthPart.button")}
-                className="bg-mainOrange text-lightBg gap-1 w-[150px] p-5 flex items-center justify-center whitespace-nowrap"
-              /> */}
-              <button className="bg-mainOrange text-lightBg w-36 p-2 rounded-2xl mb-16 flex items-center justify-center whitespace-nowrap">
-                {t("main.fourthPart.button")}
-              </button>
-              {/* </Link> */}
+              <p className="font-bold m-2">Bankist</p>
+              <Link to="https://bankist-mainpage.netlify.app/">
+                <button className="bg-mainOrange text-lightBg w-36 p-2 rounded-2xl mb-16 flex items-center justify-center whitespace-nowrap">
+                  {t("main.fourthPart.button")}
+                </button>
+              </Link>
             </div>
           </SwiperSlide>
           <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-3xl mb-56">
@@ -132,55 +117,14 @@ export default function Projects() {
               />
             </div>
             <div className="flex justify-center items-center flex-col ">
-              <p className="font-bold m-2">Sedreh</p>
-              {/* <Link
-                to="https://sedrehai.ir/"
-                className="flex justify-center items-center "
-              > */}
-              {/* <ButtonCom
-                title={t("main.fourthPart.button")}
-                className="bg-mainOrange text-lightBg gap-1 w-[150px] p-5 flex items-center justify-center whitespace-nowrap"
-              /> */}
-              <button className="bg-mainOrange text-lightBg w-36 p-2 rounded-2xl mb-16 flex items-center justify-center whitespace-nowrap">
-                {t("main.fourthPart.button")}
-              </button>
-              {/* </Link> */}
+              <p className="font-bold m-2">Forkify</p>
+              <Link to="https://forkify-full.netlify.app/">
+                <button className="bg-mainOrange text-lightBg w-36 p-2 rounded-2xl mb-16 flex items-center justify-center whitespace-nowrap">
+                  {t("main.fourthPart.button")}
+                </button>
+              </Link>
             </div>
           </SwiperSlide>
-          {/* <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-3xl mb-56">
-            <div
-              className="relative justify-center
-             dark:bg-darkWork bg-work_project_bg_light
-             xl:bg-[110%] xl:bg-no-repeat overflow-hidden h-3/4 w-full flex items-start rounded-lg"
-            >
-              <img
-                src={secondSite}
-                className="absolute bottom-0 w-1/2 h-1/2 flex justify-center items-center shadow-2xl grayscale hover:grayscale-0"
-                alt="first website"
-              />
-            </div>
-            <div className="h-1/4">
-              <p>Sedreh Website1</p>
-              <span>test</span>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-3xl mb-56">
-            <div
-              className="relative justify-center
-            dark:bg-darkWork bg-work_project_bg_light
-            xl:bg-[110%] xl:bg-no-repeat overflow-hidden h-3/4 w-full flex"
-            >
-              <img
-                src={thirdSite}
-                className="absolute bottom-0 w-1/2 h-1/2 flex justify-center items-center shadow-2xl"
-                alt="first website"
-              />
-            </div>
-            <div className="h-1/4">
-              <p>Sedreh Website1</p>
-              <span>test</span>
-            </div>
-          </SwiperSlide> */}
         </Swiper>
       </div>
     </div>
