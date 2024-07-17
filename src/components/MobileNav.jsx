@@ -67,11 +67,11 @@ const MobileNav = ({ themeNav }) => {
             <li>
               <Link to="/contact">Contact</Link>
             </li>
-            <li>
-              {/* <button onClick={toggleLanguageSwitcher}>
+            {/* <li> */}
+            {/* <button onClick={toggleLanguageSwitcher}>
                 <LiaLanguageSolid />
               </button> */}
-              {showLanguageSwitcher && (
+            {/* {showLanguageSwitcher && (
                 <div className="absolute mt-2 bg-white dark:bg-black dark:bg-gray-800 border border-gray dark:border-gray-700 rounded-3xl shadow-md right-[10%] top-[55%]">
                   <button
                     onClick={() => handleLanguageSwitch("en")}
@@ -97,8 +97,8 @@ const MobileNav = ({ themeNav }) => {
                     <img src={Iran} alt="" className="w-5 h-w-5" />
                   </button>
                 </div>
-              )}
-            </li>
+              )} */}
+            {/* </li> */}
           </ul>
         </div>
       </nav>

@@ -154,7 +154,7 @@ textarea {
 .bm-burger-button {
   position: fixed;
   right: 10%;
-  top: 26px;
+  top: 4%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,6 +165,10 @@ textarea {
   height: 24px; /* Adjust as needed */
   border-radius: 9999px;
   padding: 5px;
+}
+
+svg.flex.justify-center.items-center.w-6.h-6 {
+  margin: auto;
 }
 
 /* Color/shape of burger icon bars */
