@@ -37,6 +37,7 @@ export default function Projects() {
       </div>
       <div className="w-full sm:w-[74%] grid">
         <Swiper
+          loop={true}
           spaceBetween={50}
           slidesPerView={1}
           pagination={{
@@ -53,11 +54,11 @@ export default function Projects() {
           modules={[Pagination]}
           className="swiper-1"
         >
-          <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-3xl mb-56">
+          <SwiperSlide className="dark:bg-black bg-lightBg border-2 border-gray rounded-3xl dark:border-gray">
             <div
               className="relative justify-center bg-creamy rounded-tl-3xl rounded-tr-3xl
              dark:bg-darkWork bg-work_project_bg_light
-             xl:bg-[110%] xl:bg-no-repeat overflow-hidden h-3/4 w-full flex items-start border-creamy rounded-"
+             xl:bg-[110%] xl:bg-no-repeat overflow-hidden h-3/4 flex items-start border-creamy "
             >
               <span className="text-white bg-mainOrange p-2 rounded-full absolute left-0 ml-2 mt-2 text-sm">
                 REACT JS
@@ -68,20 +69,20 @@ export default function Projects() {
                 alt="first website"
               />
             </div>
-            <div className="flex justify-center items-center flex-col ">
+            <div className="flex justify-center items-center flex-col">
               <p className="font-bold m-2">Sedreh</p>
               <Link to="https://sedrehai.ir/">
-                <button className="bg-mainOrange text-lightBg w-36 p-2 rounded-2xl mb-16 flex items-center justify-center whitespace-nowrap">
+                <button className="bg-mainOrange text-lightBg w-32 p-2 rounded-2xl flex items-center justify-center whitespace-nowrap">
                   {t("main.fourthPart.button")}
                 </button>
               </Link>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-3xl mb-56">
+          <SwiperSlide className="dark:bg-black bg-lightBg border-2 border-gray rounded-3xl mb-56">
             <div
               className="relative justify-center bg-creamy rounded-tl-3xl rounded-tr-3xl
              dark:bg-darkWork bg-work_project_bg_light
-             xl:bg-[110%] xl:bg-no-repeat overflow-hidden h-3/4 w-full flex items-start border-creamy rounded-"
+             xl:bg-[110%] xl:bg-no-repeat overflow-hidden h-3/4 w-full flex items-start border-creamy"
             >
               <span className="text-white bg-mainOrange p-2 rounded-full absolute left-0 ml-2 mt-2 text-sm">
                 HTML + CSS + JS
@@ -101,11 +102,11 @@ export default function Projects() {
               </Link>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="dark:bg-black bg-lightBg border border-gray rounded-3xl mb-56">
+          <SwiperSlide className="dark:bg-black bg-lightBg border-2 border-gray rounded-3xl mb-56">
             <div
               className="relative justify-center bg-creamy rounded-tl-3xl rounded-tr-3xl
              dark:bg-darkWork bg-work_project_bg_light
-             xl:bg-[110%] xl:bg-no-repeat overflow-hidden h-3/4 w-full flex items-start border-creamy rounded-"
+             xl:bg-[110%] xl:bg-no-repeat overflow-hidden h-3/4 w-full flex items-start border-creamy"
             >
               <span className="text-white bg-mainOrange p-2 rounded-full absolute left-0 ml-2 mt-2 text-sm">
                 HTML + CSS + JS

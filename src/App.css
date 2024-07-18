@@ -317,6 +317,21 @@ html {
   }
 }
 
+@media (max-width: 999px) {
+  .swiper {
+    height: 450px;
+  }
+}
+
+.swiper-2 {
+  height: 320px;
+}
+
+.swiper-slide {
+  width: auto; /* Allow content to define width */
+  margin-right: 0; /* Remove margin */
+}
+
 @media only screen and (min-width: 998px) and (max-width: 1225px) {
   h2.text-3xl.font-bold.sm\:whitespace-nowrap {
     font-size: x-large;

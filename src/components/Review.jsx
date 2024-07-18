@@ -25,6 +25,7 @@ export default function Review() {
         <p className="text-2xl font-bold">{t("main.sixPart.header")}</p>
       </div>
       <Swiper
+        loop={true}
         spaceBetween={50}
         slidesPerView={1}
         pagination={{
@@ -36,7 +37,7 @@ export default function Review() {
           },
         }}
         modules={[Pagination]}
-        className="swiper-1"
+        className="swiper-2"
       >
         <SwiperSlide className="bg-darkGray dark:bg-darkGrayMode border border-gray rounded-2xl">
           <div className="flex p-8">
