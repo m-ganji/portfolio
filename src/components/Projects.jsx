@@ -35,7 +35,7 @@ export default function Projects() {
           {t("main.fourthPart.paragraph")}
         </h4>
       </div>
-      <div className="w-full sm:w-[74%] grid">
+      <div className="w-full sm:w-[75%] grid">
         <Swiper
           loop={true}
           spaceBetween={50}
