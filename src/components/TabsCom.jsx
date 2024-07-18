@@ -110,9 +110,7 @@ export default function TabsCom() {
             <div className="p-4  font-bold text-center">
               <div className="w-full flex items-center gap-2">
                 <IoMail color="#F66C59" className="mr-2" />
-
                 <span className="w-full flex flex justify-center">
-                  {" "}
                   {t("main.secondPart.calender")}
                 </span>
               </div>
@@ -142,8 +140,41 @@ export default function TabsCom() {
             <p className="text-2xl font-semibold">
               {t("main.secondPart.journey")}
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full mt-3 mb-[100px]">
-              <div className="flex flex-col">
+            <div className="grid xl:grid-cols-2 lg:grid-cols-2 grid-flow-row sm:grid-cols-2 gap-2 w-full mt-3 mb-[100px]">
+              <div className="flex items-start flex-col">
+                <div className="flex items-center">
+                  <MdOutlineSchool
+                    color="#F66C59"
+                    className="mr-2 flex items-center"
+                  />
+                  <p className="text-mainOrange">
+                    {t("main.secondPart.education")}
+                  </p>
+                </div>
+                <div className="w-5 h-5 rounded-full bg-mainOrange hover:translate-y-24 duration-500 mt-3"></div>
+                <div className="border-r-2 border-gray-500 h-24 w-0 border-gray ml-[10px]">
+                  <p className="w-[248px] ml-3 flex gap-2 flex-col">
+                     {t("main.secondPart.secondInfoEducation")} <br />
+                     {t("main.secondPart.secondInfoEducation2")} 
+                    <p className="text-mainOrange flex gap-2 mt-14">
+                      <TbCalendarTime color="#F66C59" className="" />
+                      {t("main.secondPart.secondDateEducation")}{" "}
+                    </p>
+                  </p>
+                </div>
+                <div className="w-5 h-5 rounded-full bg-mainOrange hover:translate-y-24 duration-500 mt-12"></div>
+                <div className="border-r-2 border-gray-500 h-24 w-0 border-gray ml-[10px]">
+                  <p className="w-[248px] ml-3  flex gap-2 flex-col">
+                    {t("main.secondPart.firstInfoEducation")} <br />
+                    {t("main.secondPart.firstInfoEducation2")}
+                    <p className="text-mainOrange flex gap-2 mt-7">
+                      <TbCalendarTime color="#F66C59" className="" />
+                      {t("main.secondPart.firstDateEducation")}{" "}
+                    </p>
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col mt-5 sm:mt-0">
                 <div className="flex flex-col">
                   <div className="flex items-center mb-3">
                     <MdOutlineWorkOutline
@@ -176,38 +207,6 @@ export default function TabsCom() {
                       </p>
                     </p>
                   </div>
-                </div>
-              </div>
-              <div className="flex items-start flex-col mt-5 sm:mt-0">
-                <div className="flex items-center">
-                  <MdOutlineSchool
-                    color="#F66C59"
-                    className="mr-2 flex items-center"
-                  />
-                  <p className="text-mainOrange">
-                    {t("main.secondPart.education")}
-                  </p>
-                </div>
-                <div className="w-5 h-5 rounded-full bg-mainOrange hover:translate-y-24 duration-500 mt-3"></div>
-                <div className="border-r-2 border-gray-500 h-24 w-0 border-gray ml-[10px]">
-                  <p className="w-[248px] ml-3  flex gap-2 flex-col">
-                    {t("main.secondPart.secondInfoEducation")} <br />
-                    <p className="text-mainOrange flex gap-2 mt-14">
-                      <TbCalendarTime color="#F66C59" className="" />
-                      {t("main.secondPart.secondDateEducation")}{" "}
-                    </p>
-                  </p>
-                </div>
-                <div className="w-5 h-5 rounded-full bg-mainOrange hover:translate-y-24 duration-500 mt-12"></div>
-                <div className="border-r-2 border-gray-500 h-24 w-0 border-gray ml-[10px]">
-                  <p className="w-[248px] ml-3  flex gap-2 flex-col">
-                    {t("main.secondPart.firstInfoEducation")} <br />
-                    {t("main.secondPart.firstInfoEducation2")}
-                    <p className="text-mainOrange flex gap-2 mt-7">
-                      <TbCalendarTime color="#F66C59" className="" />
-                      {t("main.secondPart.firstDateEducation")}{" "}
-                    </p>
-                  </p>
                 </div>
               </div>
             </div>

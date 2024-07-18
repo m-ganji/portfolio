@@ -177,10 +177,8 @@ function Home() {
             <p className="text-2xl font-bold">{t("main.secondPart.header")}</p>
           </div>
           <div className="flex w-full">
-            <div className="w-full hidden md:flex sm:w-1/2">
-              <img src={Programmer} alt="" className="p-[10%]" />
-            </div>
-            <div className="w-full dark:text-lightBg sm:w-1/2" ref={tabsRef}>
+            <img src={Programmer} alt="" className=" w-1/2 hidden lg:flex" />
+            <div className="w-full dark:text-lightBg 2xl:w-1/2" ref={tabsRef}>
               <TabsCom />
             </div>
           </div>
