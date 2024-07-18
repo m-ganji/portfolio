@@ -154,20 +154,20 @@ export default function TabsCom() {
                 <div className="w-5 h-5 rounded-full bg-mainOrange hover:translate-y-24 duration-500 mt-3"></div>
                 <div className="border-r-2 border-gray-500 h-24 w-0 border-gray ml-[10px]">
                   <p className="w-[248px] ml-3 flex gap-2 flex-col">
-                     {t("main.secondPart.secondInfoEducation")} <br />
-                     {t("main.secondPart.secondInfoEducation2")} 
-                    <p className="text-mainOrange flex gap-2 mt-14">
+                    {t("main.secondPart.secondInfoEducation")} <br />
+                    {t("main.secondPart.secondInfoEducation2")}
+                    <p className="text-mainOrange flex gap-2 mt-7">
                       <TbCalendarTime color="#F66C59" className="" />
-                      {t("main.secondPart.secondDateEducation")}{" "}
+                      {t("main.secondPart.secondDateEducation")}
                     </p>
                   </p>
                 </div>
                 <div className="w-5 h-5 rounded-full bg-mainOrange hover:translate-y-24 duration-500 mt-12"></div>
                 <div className="border-r-2 border-gray-500 h-24 w-0 border-gray ml-[10px]">
-                  <p className="w-[248px] ml-3  flex gap-2 flex-col">
+                  <p className="w-[180px] xl:w-[248px] ml-3 flex gap-2 flex-col">
                     {t("main.secondPart.firstInfoEducation")} <br />
                     {t("main.secondPart.firstInfoEducation2")}
-                    <p className="text-mainOrange flex gap-2 mt-7">
+                    <p className="text-mainOrange flex gap-2 xl:mt-7 mt-2">
                       <TbCalendarTime color="#F66C59" className="" />
                       {t("main.secondPart.firstDateEducation")}{" "}
                     </p>
@@ -196,10 +196,10 @@ export default function TabsCom() {
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-col mt-10">
+                <div className="flex flex-col mt-14">
                   <div className="w-5 h-5 rounded-full bg-mainOrange hover:translate-y-24 duration-500"></div>
                   <div className="border-r-2 border-gray-500 h-24 w-0 border-gray ml-[10px]">
-                    <p className="w-[248px] ml-3  flex gap-2 flex-col">
+                    <p className="w-[248px] ml-3 flex gap-2 flex-col">
                       {t("main.secondPart.firstInfoWork")} <br />
                       <p className="text-mainOrange flex gap-2 mt-7">
                         <TbCalendarTime color="#F66C59" className="" />
