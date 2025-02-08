@@ -3,7 +3,7 @@ import useLanguage from "../hooks/useLanguage";
 import Layout from "./Layout";
 
 export default function NoMatch() {
-  const { t, handleChangeLanguage } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <div>

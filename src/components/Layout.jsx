@@ -5,7 +5,6 @@ import GB from "../assets/England.png";
 import useLanguage from "../hooks/useLanguage";
 import { PiSunDimLight } from "react-icons/pi";
 import { PiMoon } from "react-icons/pi";
-import { LiaLanguageSolid } from "react-icons/lia";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useTheme } from "../context/ThemeUtils";
@@ -15,10 +14,6 @@ export default function Layout() {
   const { t, handleChangeLanguage } = useLanguage();
 
   const [showLanguageSwitcher, setShowLanguageSwitcher] = useState(false);
-
-  const toggleLanguageSwitcher = () => {
-    setShowLanguageSwitcher((prev) => !prev);
-  };
 
   const [selectedLanguage, setSelectedLanguage] = useState("en"); // Initial selected language
 
@@ -97,9 +92,7 @@ export default function Layout() {
               {t("header.thirdButton")}
             </div>
           </Link>
-          {/* <button onClick={toggleLanguageSwitcher}>
-            <LiaLanguageSolid />
-          </button> */}
+        
           {showLanguageSwitcher && (
             <div className="absolute mt-2 bg-white dark:bg-black dark:bg-gray-800 border border-gray dark:border-gray-700 rounded-3xl shadow-md right-[10%] top-[55%]">
               <button

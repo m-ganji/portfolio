@@ -7,7 +7,7 @@ import { PiNoteDuotone } from "react-icons/pi";
 import { useTheme } from "../context/ThemeUtils";
 
 export default function Services() {
-  const { t, handleChangeLanguage } = useLanguage();
+  const { t } = useLanguage();
   const { theme } = useTheme();
 
   return (

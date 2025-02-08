@@ -1,8 +1,8 @@
 // css
 import "./App.css";
 // images
-import Developer from "./assets/developer.png";
-import DarkDeveloper from "./assets/develope-dark.png";
+// import Developer from "./assets/developer.png";
+// import DarkDeveloper from "./assets/develope-dark.png";
 import Shape from "./assets/shape.svg";
 import DarkShape from "./assets/shape-dark.svg";
 import Programmer from "./assets/programmer.png";
@@ -56,7 +56,7 @@ export default function App() {
 
 function Home() {
   // switching the language
-  const { t, handleChangeLanguage } = useLanguage();
+  const { t } = useLanguage();
 
   // click animation
   const scrollToBottom = () => {
@@ -146,21 +146,24 @@ function Home() {
                   />
                 )}
               </div>
-              {theme === "light" ? (
+              {theme === "light" && (
                 <img
                   className="relative bottom-12 left-3 scale-90"
-                  src={Developer}
+                  src={"/developer.webp"}
                   height={400}
                   width={400}
                   alt="Developer"
+                  loading="lazy"
                 />
-              ) : (
+              )}
+              {theme === "dark" && (
                 <img
                   className="relative bottom-12 left-3 scale-90"
-                  src={DarkDeveloper}
+                  src={"/develope-dark.webp"}
                   height={400}
                   width={400}
-                  alt="Developer"
+                  alt="Devesloper"
+                  loading="lazy"
                 />
               )}
             </div>

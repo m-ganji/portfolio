@@ -10,7 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useTheme } from "../context/ThemeUtils";
 
 export default function Review() {
-  const { t, handleChangeLanguage } = useLanguage();
+  const { t } = useLanguage();
 
   const { theme } = useTheme();
 

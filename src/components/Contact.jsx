@@ -16,8 +16,8 @@ import { motion as m } from "framer-motion";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-export default function Contact({ theme }) {
-  const { t, handleChangeLanguage } = useLanguage();
+export default function Contact() {
+  const { t } = useLanguage();
   const [inputName, setInputName] = useState("");
   const [inputEmail, setInputEmail] = useState("");
   const [inputMessage, setinputMessage] = useState("");

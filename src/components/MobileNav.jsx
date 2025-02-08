@@ -1,18 +1,10 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../../src/App.css";
 import { slide as Menu } from "react-burger-menu";
-import useLanguage from "../hooks/useLanguage";
 import { useTheme } from "../context/ThemeUtils";
-import { useState } from "react";
-import Iran from "../assets/Iran.png";
-import GB from "../assets/England.png";
-import { LiaLanguageSolid } from "react-icons/lia";
 
-const MobileNav = ({ themeNav }) => {
-  const { theme, toggleTheme } = useTheme();
-  const handleButtonClick = () => {
-    toggleTheme();
-  };
+const MobileNav = () => {
+  const { theme } = useTheme();
 
   const menuStyles = {
     bmMenu: {
@@ -27,30 +19,6 @@ const MobileNav = ({ themeNav }) => {
       backgroundColor: theme === "dark" ? "#29283E" : "#FFF9F7",
       color: theme === "dark" ? "#FFF9F7" : "#29283E", // Use 'color' here as well
     },
-  };
-
-  // switching the language
-  const { t, handleChangeLanguage } = useLanguage();
-
-  const [showLanguageSwitcher, setShowLanguageSwitcher] = useState(false);
-
-  const toggleLanguageSwitcher = () => {
-    setShowLanguageSwitcher((prev) => !prev);
-  };
-  const [selectedLanguage, setSelectedLanguage] = useState("en"); // Initial selected language
-
-  const handleLanguageSwitch = (language) => {
-    if (selectedLanguage !== language) {
-      handleChangeLanguage(language);
-      setSelectedLanguage(language);
-    }
-    setShowLanguageSwitcher(false);
-  };
-
-  const location = useLocation();
-
-  const isActive = (path) => {
-    return location.pathname === path;
   };
 
   return (

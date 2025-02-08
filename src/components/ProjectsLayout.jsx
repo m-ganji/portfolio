@@ -9,7 +9,7 @@ import { motion as m } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export default function ProjectsLayout() {
-  const { t, handleChangeLanguage } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <m.div

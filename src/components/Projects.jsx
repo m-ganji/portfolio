@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import firstSite from "../assets/firstSite.jpeg";
 import secondSite from "../assets/forkify.png";
 import thirdSite from "../assets/thirdSite.jpg";
-import thirdSiteMobile from "../assets/thirdSite-mobile.jpg";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../App.css";
