@@ -1,5 +1,5 @@
-import lightDot from "../assets/dots-light.svg";
-import darkDot from "../assets//dots-dark.svg";
+import lightDot from "../assets/images/dots-light.webp";
+import darkDot from "../assets/images/dots-dark.webp";
 import useLanguage from "../hooks/useLanguage";
 import { SlDiamond } from "react-icons/sl";
 import { MdOutlineDeveloperMode } from "react-icons/md";

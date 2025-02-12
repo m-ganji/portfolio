@@ -1,14 +1,9 @@
-// css
 import "./App.css";
-// images
-// import Developer from "./assets/developer.png";
-// import DarkDeveloper from "./assets/develope-dark.png";
-import Shape from "./assets/shape.svg";
-import DarkShape from "./assets/shape-dark.svg";
-import Programmer from "./assets/programmer.png";
-// import ShapeLight from "./assets/shape-light.svg";
-import lightDot from "../src/assets/dots-light.svg";
-import darkDot from "../src/assets/dots-dark.svg";
+import Shape from "./assets/images/shape.webp";
+import DarkShape from "./assets/images/shape-dark.webp";
+import Programmer from "./assets/images/programmer.webp";
+import lightDot from "../src/assets/images/dots-light.webp";
+import darkDot from "../src/assets/images/dots-dark.webp";
 import Resume from "../src/assets/resume/resume.pdf";
 // icons
 import { PiTelegramLogoThin } from "react-icons/pi";

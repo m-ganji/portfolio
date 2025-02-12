@@ -1,9 +1,9 @@
 import useLanguage from "../hooks/useLanguage";
-import lightDot from "../assets/dots-light.svg";
-import darkDot from "../assets//dots-dark.svg";
-import avatar from "../assets/avatar-1.png";
-import avatar2 from "../assets/avatar-2.png";
-import avatar3 from "../assets/avatar-3.png";
+import lightDot from "../assets/images/dots-light.webp";
+import darkDot from "../assets/images//dots-dark.webp";
+import avatar from "../assets/images/avatar-1.webp";
+import avatar2 from "../assets/images/avatar-2.webp";
+import avatar3 from "../assets/images/avatar-3.webp";
 import { Pagination } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";

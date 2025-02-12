@@ -1,5 +1,5 @@
 import useLanguage from "../hooks/useLanguage";
-import contact from "../assets/Contact.svg";
+import contact from "../assets/images/Contact.webp";
 import { MdOutlineEmail } from "react-icons/md";
 import { HiOutlineHome } from "react-icons/hi2";
 import { FiPhoneCall } from "react-icons/fi";

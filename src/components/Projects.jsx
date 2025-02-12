@@ -1,10 +1,10 @@
 import useLanguage from "../hooks/useLanguage";
-import lightDot from "../assets/dots-light.svg";
-import darkDot from "../assets//dots-dark.svg";
+import lightDot from "../assets/images/dots-light.webp";
+import darkDot from "../assets/images/dots-dark.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
-import firstSite from "../assets/firstSite.jpeg";
-import secondSite from "../assets/forkify.png";
-import thirdSite from "../assets/thirdSite.jpg";
+import firstSite from "../assets/images/firstSite.webp";
+import secondSite from "../assets/images/forkify.webp";
+import thirdSite from "../assets/images/thirdSite.webp";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../App.css";
