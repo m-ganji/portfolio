@@ -88,14 +88,14 @@ function Home() {
               <Link to="/contact" className="">
                 <ButtonCom
                   title={t("main.firstPart.secondButton")}
-                  className="bg-mainOrange text-lightBg mt-5 flex justify-center items-center gap-1"
+                  className="bg-mainOrange text-lightBg mt-5 flex justify-center items-center gap-2 rounded-full p-4 min-w-[48px] min-h-[48px]"
                   icon={<PiTelegramLogoThin />}
                 />
               </Link>
               <a href={Resume}>
                 <ButtonCom
                   title={t("main.firstPart.firstButton")}
-                  className="bg-black dark:bg-lightBg dark:text-black text-lightBg mt-5 flex justify-center items-center gap-1"
+                  className="bg-black text-lightBg mt-5 flex justify-center items-center gap-2 rounded-full p-4 min-w-[48px] min-h-[48px]"
                   icon={<LuDownload />}
                 />
               </a>

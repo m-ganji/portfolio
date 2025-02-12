@@ -77,7 +77,13 @@ export default function Layout() {
             </div>
           </Link>
 
-          <button type="button" onClick={handleButtonClick}>
+          <button
+            type="button"
+            aria-label={
+              theme === "light" ? "Switch to dark mode" : "Switch to light mode"
+            }
+            onClick={handleButtonClick}
+          >
             {theme == "light" ? <PiSunDimLight /> : <PiMoon />}
           </button>
         </div>
