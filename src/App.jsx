@@ -101,19 +101,28 @@ function Home() {
               </a>
             </div>
             <div className="flex mt-5 gap-10">
-              <a href="https://www.linkedin.com/in/mganji1999">
+              <a
+                href="https://www.linkedin.com/in/mganji1999"
+                aria-label="LinkedIn Profile"
+              >
                 <FaLinkedinIn />
               </a>
-              <a href="https://github.com/m-ganji">
+              <a href="https://github.com/m-ganji" aria-label="GitHub Profile">
                 <FaGithub />
               </a>
-              <a href="https://www.instagram.com/_m.ganjii_">
+              <a
+                href="https://www.instagram.com/_m.ganjii_"
+                aria-label="Instagram Profile"
+              >
                 <FaInstagram />
               </a>
-              <a href="https://t.me/Gnj1999">
+              <a href="https://t.me/Gnj1999" aria-label="Telegram Profile">
                 <FaTelegram />
               </a>
-              <a href="https://wa.me/+989196273474">
+              <a
+                href="https://wa.me/+989196273474"
+                aria-label="WhatsApp Contact"
+              >
                 <FaWhatsapp />
               </a>
             </div>
@@ -126,7 +135,11 @@ function Home() {
             onClick={scrollToBottom}
           />
           <div className="flex justify-center items-center dark:text-lightBg mb-16 font-bold">
-            {theme === "light" ? <img src={lightDot} /> : <img src={darkDot} />}
+            {theme === "light" ? (
+              <img src={lightDot} alt="light dot" />
+            ) : (
+              <img src={darkDot} alt="dark dot" />
+            )}
             <p className="text-2xl font-bold">{t("main.secondPart.header")}</p>
           </div>
           <div className="flex w-full">

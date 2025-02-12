@@ -53,11 +53,11 @@ export default function Layout() {
         className="h-[80px] hidden sm:flex justify-between shadow-xl fixed bg-lightBg dark:bg-black w-full z-20"
         style={shadowStyle}
       >
-        <Link to="/" className=" ml-[10%]">
+        <Link to="/" className="ml-[10%] flex items-center">
           <img
             src={Logo}
-            alt=""
-            className="h-20 w-20 flex justify-center items-center fade-enter"
+            alt="Company Logo - Home"
+            className="h-20 w-20 fade-enter"
           />
         </Link>
         <div className="flex justify-start items-center gap-5 p-2 dark:text-lightBg mr-[10%]">
@@ -77,7 +77,7 @@ export default function Layout() {
             </div>
           </Link>
 
-          <button onClick={handleButtonClick}>
+          <button type="button" onClick={handleButtonClick}>
             {theme == "light" ? <PiSunDimLight /> : <PiMoon />}
           </button>
         </div>
