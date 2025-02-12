@@ -1,6 +1,4 @@
 import "./App.css";
-import Shape from "./assets/images/shape.webp";
-import DarkShape from "./assets/images/shape-dark.webp";
 import Programmer from "./assets/images/programmer.webp";
 import lightDot from "../src/assets/images/dots-light.webp";
 import darkDot from "../src/assets/images/dots-dark.webp";
@@ -78,7 +76,7 @@ function Home() {
       <Layout />
       <main className="mx-[10%] flex flex-col">
         <div className="first_part flex">
-          <section className="mt-[24%] w-full dark:text-lightBg sm:w-1/2 flex flex-col justify-center items-center text-center">
+          <section className="mt-[24%] w-full dark:text-lightBg flex flex-col justify-center items-center text-center">
             <h1 className="text-mainOrange mt-10 sm:mt-0">
               {t("main.firstPart.firstLine")}
             </h1>
@@ -118,49 +116,6 @@ function Home() {
               <a href="https://wa.me/+989196273474">
                 <FaWhatsapp />
               </a>
-            </div>
-          </section>
-          <section className="hidden sm:flex w-1/2 mt-[12%] sm:justify-end">
-            <div className="">
-              <div>
-                {theme === "light" ? (
-                  <img
-                    className="absolute "
-                    src={Shape}
-                    height={400}
-                    width={400}
-                    alt="Shape"
-                  />
-                ) : (
-                  <img
-                    className="absolute "
-                    src={DarkShape}
-                    height={400}
-                    width={400}
-                    alt="Shape"
-                  />
-                )}
-              </div>
-              {theme === "light" && (
-                <img
-                  className="relative bottom-12 left-3 scale-90"
-                  src={"/developer.webp"}
-                  height={400}
-                  width={400}
-                  alt="Developer"
-                  loading="lazy"
-                />
-              )}
-              {theme === "dark" && (
-                <img
-                  className="relative bottom-12 left-3 scale-90"
-                  src={"/develope-dark.webp"}
-                  height={400}
-                  width={400}
-                  alt="Devesloper"
-                  loading="lazy"
-                />
-              )}
             </div>
           </section>
         </div>
